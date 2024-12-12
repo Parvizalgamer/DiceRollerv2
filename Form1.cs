@@ -12,6 +12,8 @@ namespace DiceRollerv2
 {
     public partial class Form1 : Form
     {
+        private List<string> words; // Store words from the resource file
+
         public Form1()
         {
             InitializeComponent();
@@ -19,7 +21,23 @@ namespace DiceRollerv2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //do a thing
+            
+        }
+
+        private void LoadWordsFromResources()// insserts the txt file into form 
+        {
+            try
+            {
+                // Access the text file content from resources
+                string resourceContent = Properties.Resources.gen_1_pokemon; // Replace 'words' with your resource name
+
+                // Split the content into lines and store them in a list
+                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error reading resources: {ex.Message}");
+            }
         }
     }
 }
