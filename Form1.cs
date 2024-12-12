@@ -39,5 +39,17 @@ namespace DiceRollerv2
                 MessageBox.Show($"Error reading resources: {ex.Message}");
             }
         }
+
+        private void Common_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+            { e.Effect = DragDropEffects.Copy; }
+        }
+
+        private void Common_DragDrop(object sender, DragEventArgs e)
+        {
+            Label lbl = sender as Label;
+            lbl.Text = (string)e.Data.GetData(DataFormats.Text);
+        }
     }
 }
