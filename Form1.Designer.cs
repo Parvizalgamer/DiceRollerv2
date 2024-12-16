@@ -38,6 +38,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -58,7 +59,7 @@
             this.label2.AllowDrop = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(289, 124);
+            this.label2.Location = new System.Drawing.Point(461, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 80);
             this.label2.TabIndex = 1;
@@ -84,7 +85,7 @@
             this.label4.AllowDrop = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(375, 124);
+            this.label4.Location = new System.Drawing.Point(289, 124);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 80);
             this.label4.TabIndex = 3;
@@ -110,7 +111,7 @@
             this.label6.AllowDrop = true;
             this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(459, 124);
+            this.label6.Location = new System.Drawing.Point(375, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 80);
             this.label6.TabIndex = 5;
@@ -170,12 +171,23 @@
             this.label10.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
             this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(134, 47);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(653, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "each letter has randomized point and the player ahs to make a word that is over a" +
+    " set number of points and over certain caraecter legnths";
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 681);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
@@ -190,6 +202,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,6 +218,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
     }
 }
 
