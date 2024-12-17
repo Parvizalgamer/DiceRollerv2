@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.A = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.box4 = new System.Windows.Forms.Label();
+            this.box1 = new System.Windows.Forms.Label();
+            this.box2 = new System.Windows.Forms.Label();
+            this.box6 = new System.Windows.Forms.Label();
+            this.box3 = new System.Windows.Forms.Label();
+            this.box5 = new System.Windows.Forms.Label();
+            this.box9 = new System.Windows.Forms.Label();
+            this.box7 = new System.Windows.Forms.Label();
+            this.box8 = new System.Windows.Forms.Label();
             this.B = new System.Windows.Forms.Label();
             this.F = new System.Windows.Forms.Label();
             this.E = new System.Windows.Forms.Label();
@@ -64,13 +64,15 @@
             this.U = new System.Windows.Forms.Label();
             this.T = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.clear_btn = new System.Windows.Forms.Label();
+            this.submit_btn = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // A
             // 
             this.A.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.A.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A.Location = new System.Drawing.Point(206, 273);
+            this.A.Location = new System.Drawing.Point(208, 306);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(80, 80);
             this.A.TabIndex = 0;
@@ -80,128 +82,128 @@
             this.A.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
             this.A.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label2
+            // box4
             // 
-            this.label2.AllowDrop = true;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(501, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 80);
-            this.label2.TabIndex = 1;
-            this.label2.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label2.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box4.AllowDrop = true;
+            this.box4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box4.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box4.Location = new System.Drawing.Point(501, 120);
+            this.box4.Name = "box4";
+            this.box4.Size = new System.Drawing.Size(80, 80);
+            this.box4.TabIndex = 1;
+            this.box4.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box4.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label3
+            // box1
             // 
-            this.label3.AllowDrop = true;
-            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(243, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 80);
-            this.label3.TabIndex = 2;
-            this.label3.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label3.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box1.AllowDrop = true;
+            this.box1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box1.Location = new System.Drawing.Point(243, 120);
+            this.box1.Name = "box1";
+            this.box1.Size = new System.Drawing.Size(80, 80);
+            this.box1.TabIndex = 2;
+            this.box1.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box1.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label4
+            // box2
             // 
-            this.label4.AllowDrop = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(329, 120);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 80);
-            this.label4.TabIndex = 3;
-            this.label4.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label4.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box2.AllowDrop = true;
+            this.box2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box2.Location = new System.Drawing.Point(329, 120);
+            this.box2.Name = "box2";
+            this.box2.Size = new System.Drawing.Size(80, 80);
+            this.box2.TabIndex = 3;
+            this.box2.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box2.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label5
+            // box6
             // 
-            this.label5.AllowDrop = true;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(671, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 80);
-            this.label5.TabIndex = 6;
-            this.label5.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label5.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box6.AllowDrop = true;
+            this.box6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box6.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box6.Location = new System.Drawing.Point(672, 120);
+            this.box6.Name = "box6";
+            this.box6.Size = new System.Drawing.Size(80, 80);
+            this.box6.TabIndex = 6;
+            this.box6.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box6.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label6
+            // box3
             // 
-            this.label6.AllowDrop = true;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(415, 120);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(80, 80);
-            this.label6.TabIndex = 5;
-            this.label6.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label6.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box3.AllowDrop = true;
+            this.box3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box3.Location = new System.Drawing.Point(415, 120);
+            this.box3.Name = "box3";
+            this.box3.Size = new System.Drawing.Size(80, 80);
+            this.box3.TabIndex = 5;
+            this.box3.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box3.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label7
+            // box5
             // 
-            this.label7.AllowDrop = true;
-            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(585, 120);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 80);
-            this.label7.TabIndex = 4;
-            this.label7.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label7.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box5.AllowDrop = true;
+            this.box5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box5.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box5.Location = new System.Drawing.Point(585, 120);
+            this.box5.Name = "box5";
+            this.box5.Size = new System.Drawing.Size(80, 80);
+            this.box5.TabIndex = 4;
+            this.box5.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box5.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label8
+            // box9
             // 
-            this.label8.AllowDrop = true;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(930, 120);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 80);
-            this.label8.TabIndex = 9;
-            this.label8.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label8.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box9.AllowDrop = true;
+            this.box9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box9.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box9.Location = new System.Drawing.Point(930, 120);
+            this.box9.Name = "box9";
+            this.box9.Size = new System.Drawing.Size(80, 80);
+            this.box9.TabIndex = 9;
+            this.box9.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box9.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label9
+            // box7
             // 
-            this.label9.AllowDrop = true;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(758, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 80);
-            this.label9.TabIndex = 8;
-            this.label9.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label9.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box7.AllowDrop = true;
+            this.box7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box7.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box7.Location = new System.Drawing.Point(758, 120);
+            this.box7.Name = "box7";
+            this.box7.Size = new System.Drawing.Size(80, 80);
+            this.box7.TabIndex = 8;
+            this.box7.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box7.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // label10
+            // box8
             // 
-            this.label10.AllowDrop = true;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(844, 120);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(80, 80);
-            this.label10.TabIndex = 7;
-            this.label10.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.label10.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
+            this.box8.AllowDrop = true;
+            this.box8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.box8.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.box8.Location = new System.Drawing.Point(844, 120);
+            this.box8.Name = "box8";
+            this.box8.Size = new System.Drawing.Size(80, 80);
+            this.box8.TabIndex = 7;
+            this.box8.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
+            this.box8.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
+            this.box8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
             // B
             // 
             this.B.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.B.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B.Location = new System.Drawing.Point(292, 273);
+            this.B.Location = new System.Drawing.Point(294, 306);
             this.B.Name = "B";
             this.B.Size = new System.Drawing.Size(80, 80);
             this.B.TabIndex = 11;
@@ -215,7 +217,7 @@
             // 
             this.F.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.F.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.F.Location = new System.Drawing.Point(639, 273);
+            this.F.Location = new System.Drawing.Point(641, 306);
             this.F.Name = "F";
             this.F.Size = new System.Drawing.Size(80, 80);
             this.F.TabIndex = 12;
@@ -229,7 +231,7 @@
             // 
             this.E.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.E.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.E.Location = new System.Drawing.Point(553, 273);
+            this.E.Location = new System.Drawing.Point(555, 306);
             this.E.Name = "E";
             this.E.Size = new System.Drawing.Size(80, 80);
             this.E.TabIndex = 13;
@@ -243,7 +245,7 @@
             // 
             this.D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D.Location = new System.Drawing.Point(467, 273);
+            this.D.Location = new System.Drawing.Point(469, 306);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(80, 80);
             this.D.TabIndex = 14;
@@ -257,7 +259,7 @@
             // 
             this.C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.C.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C.Location = new System.Drawing.Point(381, 273);
+            this.C.Location = new System.Drawing.Point(383, 306);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(80, 80);
             this.C.TabIndex = 15;
@@ -271,7 +273,7 @@
             // 
             this.I.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.I.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.I.Location = new System.Drawing.Point(897, 273);
+            this.I.Location = new System.Drawing.Point(899, 306);
             this.I.Name = "I";
             this.I.Size = new System.Drawing.Size(80, 80);
             this.I.TabIndex = 19;
@@ -285,7 +287,7 @@
             // 
             this.J.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.J.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.J.Location = new System.Drawing.Point(983, 273);
+            this.J.Location = new System.Drawing.Point(985, 306);
             this.J.Name = "J";
             this.J.Size = new System.Drawing.Size(80, 80);
             this.J.TabIndex = 18;
@@ -298,7 +300,7 @@
             // 
             this.H.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.H.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.H.Location = new System.Drawing.Point(811, 273);
+            this.H.Location = new System.Drawing.Point(813, 306);
             this.H.Name = "H";
             this.H.Size = new System.Drawing.Size(80, 80);
             this.H.TabIndex = 17;
@@ -312,7 +314,7 @@
             // 
             this.G.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.G.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G.Location = new System.Drawing.Point(725, 273);
+            this.G.Location = new System.Drawing.Point(727, 306);
             this.G.Name = "G";
             this.G.Size = new System.Drawing.Size(80, 80);
             this.G.TabIndex = 16;
@@ -326,7 +328,7 @@
             // 
             this.S.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.S.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.S.Location = new System.Drawing.Point(940, 367);
+            this.S.Location = new System.Drawing.Point(942, 400);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(80, 80);
             this.S.TabIndex = 28;
@@ -340,7 +342,7 @@
             // 
             this.R.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.R.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R.Location = new System.Drawing.Point(854, 367);
+            this.R.Location = new System.Drawing.Point(856, 400);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(80, 80);
             this.R.TabIndex = 27;
@@ -354,7 +356,7 @@
             // 
             this.Q.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Q.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Q.Location = new System.Drawing.Point(768, 367);
+            this.Q.Location = new System.Drawing.Point(770, 400);
             this.Q.Name = "Q";
             this.Q.Size = new System.Drawing.Size(80, 80);
             this.Q.TabIndex = 26;
@@ -368,7 +370,7 @@
             // 
             this.M.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.M.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M.Location = new System.Drawing.Point(424, 367);
+            this.M.Location = new System.Drawing.Point(426, 400);
             this.M.Name = "M";
             this.M.Size = new System.Drawing.Size(80, 80);
             this.M.TabIndex = 25;
@@ -382,7 +384,7 @@
             // 
             this.N.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.N.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.N.Location = new System.Drawing.Point(510, 367);
+            this.N.Location = new System.Drawing.Point(512, 400);
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(80, 80);
             this.N.TabIndex = 24;
@@ -396,7 +398,7 @@
             // 
             this.O.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.O.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.O.Location = new System.Drawing.Point(596, 367);
+            this.O.Location = new System.Drawing.Point(598, 400);
             this.O.Name = "O";
             this.O.Size = new System.Drawing.Size(80, 80);
             this.O.TabIndex = 23;
@@ -410,7 +412,7 @@
             // 
             this.P.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.P.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P.Location = new System.Drawing.Point(682, 367);
+            this.P.Location = new System.Drawing.Point(684, 400);
             this.P.Name = "P";
             this.P.Size = new System.Drawing.Size(80, 80);
             this.P.TabIndex = 22;
@@ -424,7 +426,7 @@
             // 
             this.L.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.L.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L.Location = new System.Drawing.Point(335, 367);
+            this.L.Location = new System.Drawing.Point(337, 400);
             this.L.Name = "L";
             this.L.Size = new System.Drawing.Size(80, 80);
             this.L.TabIndex = 21;
@@ -438,7 +440,7 @@
             // 
             this.K.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.K.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.K.Location = new System.Drawing.Point(249, 367);
+            this.K.Location = new System.Drawing.Point(251, 400);
             this.K.Name = "K";
             this.K.Size = new System.Drawing.Size(80, 80);
             this.K.TabIndex = 20;
@@ -452,7 +454,7 @@
             // 
             this.Z.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Z.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Z.Location = new System.Drawing.Point(863, 457);
+            this.Z.Location = new System.Drawing.Point(865, 490);
             this.Z.Name = "Z";
             this.Z.Size = new System.Drawing.Size(80, 80);
             this.Z.TabIndex = 35;
@@ -466,7 +468,7 @@
             // 
             this.V.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.V.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V.Location = new System.Drawing.Point(519, 457);
+            this.V.Location = new System.Drawing.Point(521, 490);
             this.V.Name = "V";
             this.V.Size = new System.Drawing.Size(80, 80);
             this.V.TabIndex = 34;
@@ -480,7 +482,7 @@
             // 
             this.W.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.W.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.W.Location = new System.Drawing.Point(605, 457);
+            this.W.Location = new System.Drawing.Point(607, 490);
             this.W.Name = "W";
             this.W.Size = new System.Drawing.Size(80, 80);
             this.W.TabIndex = 33;
@@ -494,7 +496,7 @@
             // 
             this.X.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X.Location = new System.Drawing.Point(691, 457);
+            this.X.Location = new System.Drawing.Point(693, 490);
             this.X.Name = "X";
             this.X.Size = new System.Drawing.Size(80, 80);
             this.X.TabIndex = 32;
@@ -508,7 +510,7 @@
             // 
             this.Y.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Y.Location = new System.Drawing.Point(777, 457);
+            this.Y.Location = new System.Drawing.Point(779, 490);
             this.Y.Name = "Y";
             this.Y.Size = new System.Drawing.Size(80, 80);
             this.Y.TabIndex = 31;
@@ -522,7 +524,7 @@
             // 
             this.U.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.U.Location = new System.Drawing.Point(430, 457);
+            this.U.Location = new System.Drawing.Point(432, 490);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(80, 80);
             this.U.TabIndex = 30;
@@ -536,7 +538,7 @@
             // 
             this.T.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.T.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T.Location = new System.Drawing.Point(344, 457);
+            this.T.Location = new System.Drawing.Point(346, 490);
             this.T.Name = "T";
             this.T.Size = new System.Drawing.Size(80, 80);
             this.T.TabIndex = 29;
@@ -556,12 +558,36 @@
             this.label11.Text = "each letter has randomized point and the player ahs to make a word that is over a" +
     " set number of points and over certain caraecter legnths";
             // 
+            // clear_btn
+            // 
+            this.clear_btn.AllowDrop = true;
+            this.clear_btn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear_btn.Location = new System.Drawing.Point(320, 211);
+            this.clear_btn.Name = "clear_btn";
+            this.clear_btn.Size = new System.Drawing.Size(261, 80);
+            this.clear_btn.TabIndex = 37;
+            this.clear_btn.Text = "CLEAR";
+            // 
+            // submit_btn
+            // 
+            this.submit_btn.AllowDrop = true;
+            this.submit_btn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.submit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.submit_btn.Location = new System.Drawing.Point(632, 211);
+            this.submit_btn.Name = "submit_btn";
+            this.submit_btn.Size = new System.Drawing.Size(292, 80);
+            this.submit_btn.TabIndex = 38;
+            this.submit_btn.Text = "SUBMIT";
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1254, 681);
+            this.Controls.Add(this.submit_btn);
+            this.Controls.Add(this.clear_btn);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.Z);
             this.Controls.Add(this.V);
@@ -588,15 +614,15 @@
             this.Controls.Add(this.E);
             this.Controls.Add(this.F);
             this.Controls.Add(this.B);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.box9);
+            this.Controls.Add(this.box7);
+            this.Controls.Add(this.box8);
+            this.Controls.Add(this.box6);
+            this.Controls.Add(this.box3);
+            this.Controls.Add(this.box5);
+            this.Controls.Add(this.box2);
+            this.Controls.Add(this.box1);
+            this.Controls.Add(this.box4);
             this.Controls.Add(this.A);
             this.Name = "Form1";
             this.Text = "[;\'[-";
@@ -609,15 +635,15 @@
         #endregion
 
         private System.Windows.Forms.Label A;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label box4;
+        private System.Windows.Forms.Label box1;
+        private System.Windows.Forms.Label box2;
+        private System.Windows.Forms.Label box6;
+        private System.Windows.Forms.Label box3;
+        private System.Windows.Forms.Label box5;
+        private System.Windows.Forms.Label box9;
+        private System.Windows.Forms.Label box7;
+        private System.Windows.Forms.Label box8;
         private System.Windows.Forms.Label B;
         private System.Windows.Forms.Label F;
         private System.Windows.Forms.Label E;
@@ -644,6 +670,8 @@
         private System.Windows.Forms.Label U;
         private System.Windows.Forms.Label T;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label clear_btn;
+        private System.Windows.Forms.Label submit_btn;
     }
 }
 
