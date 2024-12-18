@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiceRollerv2
@@ -83,9 +82,14 @@ namespace DiceRollerv2
 
                 if (control is Label label)
                 {
-                    
+                    submitted_word += label.Text;
+                    label.Text = string.Empty; // Clear the label's text
                 }
             }
+
+            // Do something with the concatenated string
+            MessageBox.Show("Concatenated string: " + submitted_word);
         }
     }
 }
+

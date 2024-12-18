@@ -83,5 +83,8 @@
   <ItemGroup>
     <None Include="Resources\gen 1 pokemon.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ukenglish.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

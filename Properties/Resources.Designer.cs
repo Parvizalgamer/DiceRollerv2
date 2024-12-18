@@ -61,64 +61,74 @@ namespace DiceRollerv2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Name
-        ///Bulbasaur
-        ///Ivysaur
-        ///Venusaur
-        ///Charmander
-        ///Charmeleon
-        ///Charizard
-        ///Squirtle
-        ///Wartortle
-        ///Blastoise
-        ///Caterpie
-        ///Metapod
-        ///Butterfree
-        ///Weedle
-        ///Kakuna
-        ///Beedrill
-        ///Pidgey
-        ///Pidgeotto
-        ///Pidgeot
-        ///Rattata
-        ///Raticate
-        ///Spearow
-        ///Fearow
-        ///Ekans
-        ///Arbok
-        ///Pikachu
-        ///Raichu
-        ///Sandshrew
-        ///Sandslash
-        ///Nidoran♀
-        ///Nidorina
-        ///Nidoqueen
-        ///Nidoran♂
-        ///Nidorino
-        ///Nidoking
-        ///Clefairy
-        ///Clefable
-        ///Vulpix
-        ///Ninetales
-        ///Jigglypuff
-        ///Wigglytuff
-        ///Zubat
-        ///Golbat
-        ///Oddish
-        ///Gloom
-        ///Vileplume
-        ///Paras
-        ///Parasect
-        ///Venonat
-        ///Venomoth
-        ///Diglett
-        ///Dugtrio
-        ///Meowth
-        ///Persian        /// [rest of string was truncated]&quot;;.
+        ///   Looks up a localized string similar to a
+        ///aa
+        ///aaa
+        ///aachen
+        ///aardvark
+        ///aardvarks
+        ///aaron
+        ///ab
+        ///aba
+        ///ababa
+        ///abaci
+        ///aback
+        ///abactor
+        ///abactors
+        ///abacus
+        ///abacuses
+        ///abaft
+        ///abalone
+        ///abandon
+        ///abandoned
+        ///abandonee
+        ///abandonees
+        ///abandoning
+        ///abandonment
+        ///abandons
+        ///abase
+        ///abased
+        ///abasement
+        ///abases
+        ///abash
+        ///abashed
+        ///abashes
+        ///abashing
+        ///abasing
+        ///abatable
+        ///abate
+        ///abated
+        ///abatement
+        ///abatements
+        ///abater
+        ///abaters
+        ///abates
+        ///abating
+        ///abator
+        ///abators
+        ///abattoir
+        ///abattoirs
+        ///abbacies
+        ///abbacy
+        ///abbess
+        ///abbesses
+        ///abbey
+        ///abbeys
+        ///abbot
+        ///abbots
+        ///abbotsbury
+        ///abbott
+        ///abbreviate
+        ///abbreviated
+        ///abbreviates
+        ///abbreviating
+        ///abbreviation
+        ///abbreviations
+        ///a [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string gen_1_pokemon {
+        internal static string ukenglish {
             get {
-                return ResourceManager.GetString("gen_1_pokemon", resourceCulture);
+                return ResourceManager.GetString("ukenglish", resourceCulture);
             }
         }
     }
