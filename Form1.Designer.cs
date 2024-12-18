@@ -568,6 +568,7 @@
             this.clear_btn.Size = new System.Drawing.Size(261, 80);
             this.clear_btn.TabIndex = 37;
             this.clear_btn.Text = "CLEAR";
+            this.clear_btn.Click += new System.EventHandler(this.clear_btn_Click);
             // 
             // submit_btn
             // 
@@ -579,6 +580,7 @@
             this.submit_btn.Size = new System.Drawing.Size(292, 80);
             this.submit_btn.TabIndex = 38;
             this.submit_btn.Text = "SUBMIT";
+            this.submit_btn.Click += new System.EventHandler(this.submit_btn_Click);
             // 
             // Form1
             // 

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace DiceRollerv2
@@ -7,10 +8,12 @@ namespace DiceRollerv2
     public partial class Form1 : Form
     {
         private List<string> words; // Store words from the resource file
+        private string submitted_word;
 
         public Form1()
         {
             InitializeComponent();
+            //AssignRandomValuesToLabels(5,25);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -55,6 +58,34 @@ namespace DiceRollerv2
                 DoDragDrop(lbl.Text, DragDropEffects.Copy);
 
 
+        }
+
+        private void clear_btn_Click(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 9; i++)
+            {
+                string labelName = "box" + i;
+                Control control = this.Controls.Find(labelName, true)[0];
+
+                if (control is Label label)
+                {
+                    label.Text = string.Empty;
+                }
+            }
+        }
+
+        private void submit_btn_Click(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 9; i++)
+            {
+                string labelName = "box" + i;
+                Control control = this.Controls.Find(labelName, true)[0];
+
+                if (control is Label label)
+                {
+                    
+                }
+            }
         }
     }
 }
