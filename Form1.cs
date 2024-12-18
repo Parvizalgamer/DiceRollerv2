@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace DiceRollerv2
@@ -25,7 +26,7 @@ namespace DiceRollerv2
             try
             {
                 // Access the text file content from resources
-                string resourceContent = Properties.Resources.gen_1_pokemon; // Replace 'words' with your resource name
+                string resourceContent = Properties.Resources.ukenglish; // Replace 'words' with your resource name
 
                 // Split the content into lines and store them in a list
                 words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
@@ -40,13 +41,13 @@ namespace DiceRollerv2
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             { e.Effect = DragDropEffects.Copy; }
-        }
+        }//drag drop
 
         private void Common_DragDrop(object sender, DragEventArgs e)
         {
             Label lbl = sender as Label;
             lbl.Text = (string)e.Data.GetData(DataFormats.Text);
-        }
+        }//drag drop
 
         private void Common_MouseDown(object sender, MouseEventArgs e)
         {
@@ -57,7 +58,7 @@ namespace DiceRollerv2
                 DoDragDrop(lbl.Text, DragDropEffects.Copy);
 
 
-        }
+        }//drag drop
 
         private void clear_btn_Click(object sender, EventArgs e)
         {
@@ -71,7 +72,7 @@ namespace DiceRollerv2
                     label.Text = string.Empty;
                 }
             }
-        }
+        } // clear btn
 
         private void submit_btn_Click(object sender, EventArgs e)
         {
@@ -89,6 +90,39 @@ namespace DiceRollerv2
 
             // Do something with the concatenated string
             MessageBox.Show("Concatenated string: " + submitted_word);
+            LoadWordsAndValidate();
+        }// submit btn
+
+        public static bool IsWordValid(string submittedWord, List<string> dictionaryWords)
+        {
+            return dictionaryWords.Contains(submittedWord, StringComparer.OrdinalIgnoreCase);
+        }
+
+        private void LoadWordsAndValidate()
+        {
+            try
+            {
+                // Load words from the resource file
+                string resourceContent = Properties.Resources.ukenglish;
+                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+
+                // Validate the submitted word
+                bool isValid = IsWordValid(submitted_word, words);
+
+                if (isValid)
+                {
+                    MessageBox.Show("The word is valid!");
+                    
+                }
+                else
+                {
+                    MessageBox.Show("The word is invalid.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading words or validating: {ex.Message}");
+            }
         }
     }
 }
