@@ -9,17 +9,21 @@ namespace DiceRollerv2
     {
         private List<string> words; // Store words from the resource file
         private string submitted_word;
+        private Random random; // Declare Random object at the class level so it's accessible throughout
+
 
         public Form1()
         {
             InitializeComponent();
-            //AssignRandomValuesToLabels(5,25);
+            random = new Random();
+            AssignRandomNumbersToLabels();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
 
         private void LoadWordsFromResources()// insserts the txt file into form 
         {
@@ -112,7 +116,7 @@ namespace DiceRollerv2
                 if (isValid)
                 {
                     MessageBox.Show("The word is valid!");
-                    
+
                 }
                 else
                 {
@@ -122,6 +126,84 @@ namespace DiceRollerv2
             catch (Exception ex)
             {
                 MessageBox.Show($"Error loading words or validating: {ex.Message}");
+            }
+        }
+
+
+        public class RandomNumberAssignor
+        {
+            private Random random = new Random();
+            private int[] labelNumbers = new int[26]; // Array to hold random numbers for 26 labels
+
+            // Method to assign random numbers to the labels
+            public void AssignRandomNumbersToLabels()
+            {
+                // Create a list to hold numbers from 5 to 31
+                List<int> availableNumbers = new List<int>();
+                for (int i = 5; i <= 31; i++)
+                {
+                    availableNumbers.Add(i);
+                }
+
+                // Use a for loop to assign random numbers to the labels
+                for (int i = 0; i < 26; i++)
+                {
+                    // Pick a random number from available numbers
+                    int randomIndex = random.Next(availableNumbers.Count);
+                    int randomNumber = availableNumbers[randomIndex];
+
+                    // Store the number in the array for the current label
+                    labelNumbers[i] = randomNumber;
+
+                    // Remove the number from the available numbers list to prevent repetition
+                    availableNumbers.RemoveAt(randomIndex);
+
+                    // Optionally, you can set the text of the label here if needed:
+                    // Controls[$"label{i+1}"].Text = randomNumber.ToString();
+                }
+            }
+
+            // Method to get the random number assigned to a specific label
+            public int GetNumberForLabel(int labelIndex)
+            {
+                if (labelIndex >= 1 && labelIndex <= 26)
+                {
+                    return labelNumbers[labelIndex - 1]; // Array is 0-based, labels are 1-based
+                }
+                else
+                {
+                    throw new ArgumentOutOfRangeException("labelIndex", "Index must be between 1 and 26.");
+                }
+            }
+        }
+
+        private void AssignRandomNumbersToLabels()
+        {
+            // Create a list of available numbers from 5 to 31
+            List<int> availableNumbers = new List<int>();
+            for (int i = 5; i <= 31; i++)
+            {
+                availableNumbers.Add(i);
+            }
+
+            // Loop through all 26 labels and assign random numbers
+            for (int i = 1; i <= 26; i++)
+            {
+                string labelName = $"label{i}";
+
+                // Pick a random number from available numbers
+                int randomIndex = random.Next(availableNumbers.Count); // Using the random object defined at the class level
+                int randomNumber = availableNumbers[randomIndex];
+
+                // Remove the number from the available numbers list to prevent repetition
+                availableNumbers.RemoveAt(randomIndex);
+
+                // Find the label by name and assign the number to its text
+                Label label = this.Controls[labelName] as Label;
+                if (label != null)
+                {
+                    label.Text = randomNumber.ToString();
+                }
             }
         }
     }
