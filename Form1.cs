@@ -24,6 +24,32 @@ namespace DiceRollerv2
 
         }
 
+        private void LoadWordsAndValidate()
+        {
+            try
+            {
+                // Load words from the resource file
+                string resourceContent = Properties.Resources.ukenglish;
+                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+
+                // Validate the submitted word
+                bool isValid = IsWordValid(submitted_word, words);
+
+                if (isValid)
+                {
+                    MessageBox.Show("The word is valid!");
+
+                }
+                else
+                {
+                    MessageBox.Show("The word is invalid.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading words or validating: {ex.Message}");
+            }
+        }// bring the word from english file from resources into a list called  resource content 
 
         private void LoadWordsFromResources()// insserts the txt file into form 
         {
@@ -100,38 +126,8 @@ namespace DiceRollerv2
         public static bool IsWordValid(string submittedWord, List<string> dictionaryWords)
         {
             return dictionaryWords.Contains(submittedWord, StringComparer.OrdinalIgnoreCase);
-        }
-
-        private void LoadWordsAndValidate()
-        {
-            try
-            {
-                // Load words from the resource file
-                string resourceContent = Properties.Resources.ukenglish;
-                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
-
-                // Validate the submitted word
-                bool isValid = IsWordValid(submitted_word, words);
-
-                if (isValid)
-                {
-                    MessageBox.Show("The word is valid!");
-
-                }
-                else
-                {
-                    MessageBox.Show("The word is invalid.");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error loading words or validating: {ex.Message}");
-            }
-        }
-
-
-       
-
+        }// checks if the word submited is valid or not
+                
         private void AssignRandomNumbersToLabels()
         {
             // Create a list of available numbers from 5 to 31
@@ -160,7 +156,7 @@ namespace DiceRollerv2
                     label.Text = randomNumber.ToString();
                 }
             }
-        }
+        }// gives the letter a random int value
     }
 }
 
