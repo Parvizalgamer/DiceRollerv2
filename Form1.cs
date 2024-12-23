@@ -130,52 +130,7 @@ namespace DiceRollerv2
         }
 
 
-        public class RandomNumberAssignor
-        {
-            private Random random = new Random();
-            private int[] labelNumbers = new int[26]; // Array to hold random numbers for 26 labels
-
-            // Method to assign random numbers to the labels
-            public void AssignRandomNumbersToLabels()
-            {
-                // Create a list to hold numbers from 5 to 31
-                List<int> availableNumbers = new List<int>();
-                for (int i = 5; i <= 31; i++)
-                {
-                    availableNumbers.Add(i);
-                }
-
-                // Use a for loop to assign random numbers to the labels
-                for (int i = 0; i < 26; i++)
-                {
-                    // Pick a random number from available numbers
-                    int randomIndex = random.Next(availableNumbers.Count);
-                    int randomNumber = availableNumbers[randomIndex];
-
-                    // Store the number in the array for the current label
-                    labelNumbers[i] = randomNumber;
-
-                    // Remove the number from the available numbers list to prevent repetition
-                    availableNumbers.RemoveAt(randomIndex);
-
-                    // Optionally, you can set the text of the label here if needed:
-                    // Controls[$"label{i+1}"].Text = randomNumber.ToString();
-                }
-            }
-
-            // Method to get the random number assigned to a specific label
-            public int GetNumberForLabel(int labelIndex)
-            {
-                if (labelIndex >= 1 && labelIndex <= 26)
-                {
-                    return labelNumbers[labelIndex - 1]; // Array is 0-based, labels are 1-based
-                }
-                else
-                {
-                    throw new ArgumentOutOfRangeException("labelIndex", "Index must be between 1 and 26.");
-                }
-            }
-        }
+       
 
         private void AssignRandomNumbersToLabels()
         {
