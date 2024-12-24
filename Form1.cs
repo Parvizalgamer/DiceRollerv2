@@ -28,6 +28,7 @@ namespace DiceRollerv2
 
         private void LoadWordsAndValidate()
         {
+
             try
             {
                 // Load words from the resource file
@@ -36,6 +37,7 @@ namespace DiceRollerv2
 
                 // Validate the submitted word
                 bool isValid = IsWordValid(submitted_word, words);
+
 
                 if (isValid)
                 {
@@ -53,21 +55,7 @@ namespace DiceRollerv2
             }
         }// bring the word from english file from resources into a list called  resource content 
 
-        private void LoadWordsFromResources()// insserts the txt file into form 
-        {
-            try
-            {
-                // Access the text file content from resources
-                string resourceContent = Properties.Resources.ukenglish; // Replace 'words' with your resource name
-
-                // Split the content into lines and store them in a list
-                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error reading resources: {ex.Message}");
-            }
-        }
+       
 
         private void Common_DragEnter(object sender, DragEventArgs e)
         {
@@ -139,7 +127,7 @@ namespace DiceRollerv2
             // Reset the score before calculating it again
             totalScore = 0;
             score = 0;  // Reset the score (change from totalScore to score)
-            submitted_word = ""; // Reset the submitted word
+            submitted_word = string.Empty; // Reset the submitted word
 
             // Loop through the boxes to get the current word
             for (int i = 1; i <= 9; i++)
@@ -167,7 +155,15 @@ namespace DiceRollerv2
 
         public static bool IsWordValid(string submittedWord, List<string> dictionaryWords)
         {
-            return dictionaryWords.Contains(submittedWord, StringComparer.OrdinalIgnoreCase);
+            if (string.IsNullOrWhiteSpace(submittedWord))
+            {
+                return false;
+            }
+
+            else
+            {
+                return dictionaryWords.Contains(submittedWord, StringComparer.OrdinalIgnoreCase);
+            }
         }// checks if the word submited is valid or not
 
         private void AssignRandomNumbersToAlphabeticLabels()
