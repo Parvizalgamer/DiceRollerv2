@@ -23,7 +23,7 @@ namespace DiceRollerv2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //idk
         }
 
         private void LoadWordsAndValidate()
