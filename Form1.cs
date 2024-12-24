@@ -18,7 +18,9 @@ namespace DiceRollerv2
         {
             InitializeComponent();
             random = new Random();
+            InitializeGame();
             AssignRandomNumbersToAlphabeticLabels();
+              LoadWords();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -26,23 +28,100 @@ namespace DiceRollerv2
 
         }
 
+        private void InitializeGame()
+        {
+            bool validSetup = false;
+            int attempts = 0;
+            int maxAttempts = 10; // Prevent infinite loops
+            int requiredScore = 0; // This will hold the score of the computer-generated word
+            string targetWord = ""; // Store the target word for debugging or hint purposes
+
+            while (!validSetup && attempts < maxAttempts)
+            {
+                attempts++;
+
+                // Assign random numbers to letters
+                AssignRandomNumbersToAlphabeticLabels();
+
+                // Generate a random word
+                targetWord = GenerateRandomWord();
+
+                if (!string.IsNullOrEmpty(targetWord))
+                {
+                    // Calculate the score of the generated word
+                    requiredScore = CalculateTotalScore(targetWord.ToUpper());
+
+                    // Ensure the word is valid and scorable
+                    if (requiredScore > 0) // Optionally, you can add more conditions
+                    {
+                        validSetup = true; // Exit the loop
+                    }
+                }
+            }
+
+            if (validSetup)
+            {
+                MessageBox.Show($"Game initialized! The computer's word is: {targetWord}\nRequired Score: {requiredScore}");
+            }
+            else
+            {
+                MessageBox.Show("Unable to create a valid game setup after multiple attempts.");
+            }
+
+            // Set the required score for the player
+            SetRequiredScore(requiredScore);
+        }
+
+        private string GenerateRandomWord(int minLength = 5, int maxLength = 7)
+        {
+            // Ensure words list is initialized before proceeding
+            if (words == null || words.Count == 0)
+            {
+                MessageBox.Show("The word list has not been initialized.");
+                return null;
+            }
+
+            // Filter the list of words to include only those within the length range
+            List<string> validWords = words.Where(word => word.Length >= minLength && word.Length <= maxLength).ToList();
+
+            if (validWords.Count == 0)
+            {
+                return null; // No valid words found
+            }
+
+            // Select a random word from the valid list
+            int randomIndex = random.Next(validWords.Count);
+            return validWords[randomIndex];
+        }
+
+
+        private bool IsWordScorable(string word, int minScore, int maxScore)
+        {
+            int wordScore = CalculateTotalScore(word.ToUpper());
+            return wordScore >= minScore && wordScore <= maxScore;
+        }
+        private void SetRequiredScore(int score)
+        {
+            // Update the label or any UI element to display the required score
+            required_score_label.Text = $"Required Score: {score}"; // Assuming you have a label named 'required_score_label'
+        }
+
         private void LoadWordsAndValidate()
         {
-
             try
             {
-                // Load words from the resource file
-                string resourceContent = Properties.Resources.ukenglish;
-                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+                // If the words list is null, load it from the resource
+                if (words == null || words.Count == 0)
+                {
+                    LoadWords();
+                }
 
                 // Validate the submitted word
                 bool isValid = IsWordValid(submitted_word, words);
 
-
                 if (isValid)
                 {
                     MessageBox.Show("The word is valid!");
-
                 }
                 else
                 {
@@ -51,11 +130,36 @@ namespace DiceRollerv2
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading words or validating: {ex.Message}");
+                MessageBox.Show($"Error validating word: {ex.Message}");
             }
-        }// bring the word from english file from resources into a list called  resource content 
+        }
 
-       
+        // bring the word from english file from resources into a list called  resource content 
+        private void LoadWords()
+        {
+            try
+            {
+                // Load words from the resource file
+                string resourceContent = Properties.Resources.ukenglish;
+
+                if (string.IsNullOrEmpty(resourceContent))
+                {
+                    MessageBox.Show("The resource file is empty or missing.");
+                    return;
+                }
+
+                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+
+                if (words.Count == 0)
+                {
+                    MessageBox.Show("No words found in the resource file.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading words: {ex.Message}");
+            }
+        }
 
         private void Common_DragEnter(object sender, DragEventArgs e)
         {
@@ -135,11 +239,18 @@ namespace DiceRollerv2
                 string labelName = "box" + i;
                 Control control = this.Controls.Find(labelName, true)[0];
 
-                if (control is Label label)
+                if (control is Label label && !string.IsNullOrEmpty(label.Text))
                 {
                     submitted_word += label.Text; // Concatenate label text to form the word
                     label.Text = string.Empty; // Clear the label's text
                 }
+            }
+
+            // Ensure that the word has been submitted before calculating
+            if (string.IsNullOrEmpty(submitted_word))
+            {
+                MessageBox.Show("Please create a word by dragging letters.");
+                return;
             }
 
             // Calculate and show the score based on the word
