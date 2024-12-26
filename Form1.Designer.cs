@@ -93,6 +93,7 @@
             this.labelZ = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.user_score = new System.Windows.Forms.Label();
+            this.req_score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // A
@@ -904,8 +905,19 @@
             this.user_score.Location = new System.Drawing.Point(1581, 185);
             this.user_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.user_score.Name = "user_score";
-            this.user_score.Size = new System.Drawing.Size(213, 123);
+            this.user_score.Size = new System.Drawing.Size(287, 123);
             this.user_score.TabIndex = 66;
+            // 
+            // req_score
+            // 
+            this.req_score.AllowDrop = true;
+            this.req_score.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.req_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.req_score.Location = new System.Drawing.Point(13, 80);
+            this.req_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.req_score.Name = "req_score";
+            this.req_score.Size = new System.Drawing.Size(343, 201);
+            this.req_score.TabIndex = 67;
             // 
             // Form1
             // 
@@ -913,6 +925,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1881, 1048);
+            this.Controls.Add(this.req_score);
             this.Controls.Add(this.user_score);
             this.Controls.Add(this.labelZ);
             this.Controls.Add(this.labelY);
@@ -1053,6 +1066,7 @@
         private System.Windows.Forms.Label labelZ;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label user_score;
+        private System.Windows.Forms.Label req_score;
     }
 }
 

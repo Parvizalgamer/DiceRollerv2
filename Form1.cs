@@ -11,15 +11,18 @@ namespace DiceRollerv2
         private string submitted_word;
         private Random random; // Declare Random object at the class level so it's accessible throughout
         private Dictionary<char, int> letterValues; // Dictionary to store actual values for A-Z
-        private int score = 0;
+        private int userscore = 0;
         private int totalScore = 0;
         private string scoreword;
-
+        private int reqscorewordlength;
+        private int reqwordscore;
         public Form1()
         {
             InitializeComponent();
             random = new Random();
             AssignRandomNumbersToAlphabeticLabels();
+            LoadWordsAndValidate();
+            GetRandomWord();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -56,7 +59,7 @@ namespace DiceRollerv2
             }
         }// bring the word from english file from resources into a list called  resource content 
 
-       private void Common_DragEnter(object sender, DragEventArgs e)
+        private void Common_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             { e.Effect = DragDropEffects.Copy; }
@@ -104,10 +107,10 @@ namespace DiceRollerv2
         {
             // Reset the score to 0 when the clear button is clicked
             totalScore = 0;
-            score = 0; // Reset the score
+            userscore = 0; // Reset the score
 
             // Update the score label to show the empty score or 0
-            user_score.Text = score.ToString(); // Assuming 'user_score' is a label to show the score
+            user_score.Text = userscore.ToString(); // Assuming 'user_score' is a label to show the score
 
             for (int i = 1; i <= 9; i++)
             {
@@ -125,7 +128,7 @@ namespace DiceRollerv2
         {
             // Reset the score before calculating it again
             totalScore = 0;
-            score = 0;  // Reset the score (change from totalScore to score)
+            userscore = 0;  // Reset the score (change from totalScore to score)
             submitted_word = string.Empty; // Reset the submitted word
 
             // Loop through the boxes to get the current word
@@ -213,37 +216,68 @@ namespace DiceRollerv2
         private int CalculateTotalScore(string word)
         {
             // Reset the score at the start of the calculation
-            score = 0; // Ensure the score starts fresh
+            userscore = 0; // Ensure the score starts fresh
 
             // Loop through each character in the submitted word
             foreach (char c in word)
             {
                 if (letterValues.ContainsKey(c)) // Ensure the letter exists in the dictionary
                 {
-                    score += letterValues[c]; // Add the letter's value to the score
+                    userscore += letterValues[c]; // Add the letter's value to the score
                 }
             }
 
             // Update the score display (assuming you have a label named 'user_score' to show the score)
-            user_score.Text = score.ToString(); // Show the updated score
+            user_score.Text = userscore.ToString(); // Show the updated score
 
-            return score; // Return the calculated score
+            return userscore; // Return the calculated score
+            CheckScoreAndWordLength();
         }
 
-        private (string word, int score) GetRandomWord()
+        private void GetRandomWord()
         {
-            // Select a random word from the list
-            int randomIndex = random.Next(words.Count);
-            scoreword = words[randomIndex];
+            // Loop until the word score is between 50 and 150 and the word length is between 4 and 6
+            do
+            {
+                // Select a random word from the list
+                int randomIndex = random.Next(words.Count);
+                scoreword = words[randomIndex];
 
-            // Convert the word to uppercase for scoring
-            string wordToScore = scoreword.ToUpper();
+                // Check if the word length is between 4 and 6 letters
+                if (scoreword.Length >= 4 && scoreword.Length <= 6)
+                {
+                    // Convert the word to uppercase for scoring
+                    string wordToScore = scoreword.ToUpper();
 
-            // Calculate the score using the existing method
-            int wordScore = CalculateTotalScore(wordToScore);
+                    // Calculate the score using the existing method
+                    reqwordscore = CalculateTotalScore(wordToScore);
+                }
+                else
+                {
+                    // If the word length is not between 4 and 6, skip this word
+                    reqwordscore = 0;  // Prevent calculating score for invalid words
+                }
+            }
+            while (reqwordscore < 50 || reqwordscore > 150 || scoreword.Length < 4 || scoreword.Length > 6); // Ensure the word's score and length are valid
 
+            reqscorewordlength = scoreword.Length;
+
+            // Set the required score label with the valid word score and length
+            req_score.Text = $"Req score: {reqwordscore} \n Req length: {reqscorewordlength}";
         }
 
+        private void CheckScoreAndWordLength()
+        {
+            
+            // Check both conditions
+            if (userscore >= reqwordscore && reqscorewordlength == submitted_word.Length)
+            {
+                MessageBox.Show("Congratulations! You have met the required score and word length.");
+            }
+            else
+            {
+            }
+        }
 
     }
 }
