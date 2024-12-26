@@ -13,6 +13,7 @@ namespace DiceRollerv2
         private Dictionary<char, int> letterValues; // Dictionary to store actual values for A-Z
         private int score = 0;
         private int totalScore = 0;
+        private string scoreword;
 
         public Form1()
         {
@@ -55,9 +56,7 @@ namespace DiceRollerv2
             }
         }// bring the word from english file from resources into a list called  resource content 
 
-       
-
-        private void Common_DragEnter(object sender, DragEventArgs e)
+       private void Common_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             { e.Effect = DragDropEffects.Copy; }
@@ -211,7 +210,6 @@ namespace DiceRollerv2
             }
         }
 
-
         private int CalculateTotalScore(string word)
         {
             // Reset the score at the start of the calculation
@@ -231,6 +229,22 @@ namespace DiceRollerv2
 
             return score; // Return the calculated score
         }
+
+        private (string word, int score) GetRandomWord()
+        {
+            // Select a random word from the list
+            int randomIndex = random.Next(words.Count);
+            scoreword = words[randomIndex];
+
+            // Convert the word to uppercase for scoring
+            string wordToScore = scoreword.ToUpper();
+
+            // Calculate the score using the existing method
+            int wordScore = CalculateTotalScore(wordToScore);
+
+        }
+
+
     }
 }
 
