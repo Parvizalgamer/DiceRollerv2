@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="Resources\ukenglish.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expanded_filtered_common_words.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filtered_english2.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

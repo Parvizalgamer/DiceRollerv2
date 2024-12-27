@@ -36,7 +36,7 @@ namespace DiceRollerv2
             try
             {
                 // Load words from the resource file
-                string resourceContent = Properties.Resources.ukenglish;
+                string resourceContent = Properties.Resources.filtered_english2;
                 words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
 
                 // Validate the submitted word
@@ -153,6 +153,7 @@ namespace DiceRollerv2
 
             // Validate the word
             LoadWordsAndValidate();
+            CheckScoreAndWordLength();
         }// submit btn
 
         public static bool IsWordValid(string submittedWord, List<string> dictionaryWords)
@@ -216,7 +217,7 @@ namespace DiceRollerv2
         private int CalculateTotalScore(string word)
         {
             // Reset the score at the start of the calculation
-            userscore = 0; // Ensure the score starts fresh
+            userscore = 0;
 
             // Loop through each character in the submitted word
             foreach (char c in word)
@@ -228,11 +229,11 @@ namespace DiceRollerv2
             }
 
             // Update the score display (assuming you have a label named 'user_score' to show the score)
-            user_score.Text = userscore.ToString(); // Show the updated score
+            user_score.Text = userscore.ToString();
 
             return userscore; // Return the calculated score
-            CheckScoreAndWordLength();
         }
+
 
         private void GetRandomWord()
         {

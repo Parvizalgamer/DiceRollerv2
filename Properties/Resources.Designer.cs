@@ -61,74 +61,90 @@ namespace DiceRollerv2.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to a
-        ///aa
-        ///aaa
-        ///aachen
-        ///aardvark
-        ///aardvarks
+        ///   Looks up a localized string similar to aachen
         ///aaron
-        ///ab
-        ///aba
-        ///ababa
-        ///abaci
         ///aback
-        ///abactor
-        ///abactors
         ///abacus
-        ///abacuses
         ///abaft
-        ///abalone
-        ///abandon
-        ///abandoned
-        ///abandonee
-        ///abandonees
-        ///abandoning
-        ///abandonment
-        ///abandons
         ///abase
         ///abased
-        ///abasement
         ///abases
         ///abash
-        ///abashed
-        ///abashes
-        ///abashing
-        ///abasing
-        ///abatable
         ///abate
         ///abated
-        ///abatement
-        ///abatements
-        ///abater
-        ///abaters
         ///abates
-        ///abating
-        ///abator
-        ///abators
-        ///abattoir
-        ///abattoirs
-        ///abbacies
-        ///abbacy
         ///abbess
-        ///abbesses
         ///abbey
         ///abbeys
         ///abbot
         ///abbots
-        ///abbotsbury
-        ///abbott
-        ///abbreviate
-        ///abbreviated
-        ///abbreviates
-        ///abbreviating
-        ///abbreviation
-        ///abbreviations
-        ///a [rest of string was truncated]&quot;;.
+        ///abduct
+        ///abeam
+        ///abed
+        ///abel
+        ///abet
+        ///abets
+        ///abhor
+        ///abhors
+        ///abide
+        ///abided
+        ///abides
+        ///abject
+        ///abjure
+        ///ablaze
+        ///able
+        ///ablest
+        ///ably
+        ///aboard
+        ///abode
+        ///abodes
+        ///abort
+        ///aborts
+        ///abound
+        ///about
+        ///above
+        ///abrade
+        ///abroad
+        ///abrupt
+        ///abseil
+        ///absent
+        ///absorb
+        ///absurd
+        ///abuse
+        ///abused
+        ///abuser
+        ///abuses
+        ///abut
+        ///abuts
+        ///abyss
+        ///acacia
+        ///accede
+        ///accent
+        ///accept
+        ///access
+        ///accord
+        ///accost
+        ///accra
+        ///accrue
+        ///accuse
+        ///aces
+        ///acetic
+        ///ache
+        ///ached
+        ///aches
+        ///aching
+        ///acid
+        ///acidic
+        ///acids
+        ///acme
+        ///acne
+        ///acorn
+        ///acorns
+        ///acqui [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string ukenglish {
+        internal static string filtered_english2 {
             get {
-                return ResourceManager.GetString("ukenglish", resourceCulture);
+                return ResourceManager.GetString("filtered_english2", resourceCulture);
             }
         }
     }
