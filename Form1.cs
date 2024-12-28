@@ -27,13 +27,15 @@ namespace DiceRollerv2
             LoadWordsAndValidate();
             GetRandomWord();
 
-            this.showWordButton.Click += new EventHandler(this.ShowRequiredWord);   
+
+            // Set KeyPreview to true so that the form can capture key events
+            this.KeyPreview = true;
+
+            // Wire up the KeyDown event
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
         }
 
-        private void ShowRequiredWord(object sender, EventArgs e)
-        {
-            MessageBox.Show($"Required word: {scoreword}", "Required Word", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+      
         private void Form1_Load(object sender, EventArgs e)
         {
             //idk
@@ -326,8 +328,14 @@ namespace DiceRollerv2
             submitted_word = string.Empty;
         }
 
-
-
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F10)
+            {
+                // Trigger the same functionality as the showWordButton_Click
+                showWordButton_Click(sender, e);
+            }
+        }
 
 
         private void points_Click(object sender, EventArgs e)
@@ -337,7 +345,7 @@ namespace DiceRollerv2
 
         private void showWordButton_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show($"Required word: {scoreword}", "Required Word", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 

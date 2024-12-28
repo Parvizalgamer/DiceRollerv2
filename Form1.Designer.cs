@@ -940,12 +940,13 @@
             this.showWordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.showWordButton.FlatAppearance.BorderSize = 0;
             this.showWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showWordButton.Location = new System.Drawing.Point(1803, 1013);
+            this.showWordButton.Location = new System.Drawing.Point(1735, 937);
             this.showWordButton.Name = "showWordButton";
-            this.showWordButton.Size = new System.Drawing.Size(75, 23);
+            this.showWordButton.Size = new System.Drawing.Size(124, 99);
             this.showWordButton.TabIndex = 69;
             this.showWordButton.UseVisualStyleBackColor = false;
             this.showWordButton.Click += new System.EventHandler(this.showWordButton_Click);
+            this.showWordButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
             // Form1
             // 
