@@ -94,6 +94,8 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.user_score = new System.Windows.Forms.Label();
             this.req_score = new System.Windows.Forms.Label();
+            this.points = new System.Windows.Forms.Label();
+            this.showWordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // A
@@ -919,12 +921,40 @@
             this.req_score.Size = new System.Drawing.Size(343, 201);
             this.req_score.TabIndex = 67;
             // 
+            // points
+            // 
+            this.points.AllowDrop = true;
+            this.points.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.points.Location = new System.Drawing.Point(1661, 29);
+            this.points.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.points.Name = "points";
+            this.points.Size = new System.Drawing.Size(138, 123);
+            this.points.TabIndex = 68;
+            this.points.Text = "__";
+            this.points.Click += new System.EventHandler(this.points_Click);
+            // 
+            // showWordButton
+            // 
+            this.showWordButton.BackColor = System.Drawing.Color.Transparent;
+            this.showWordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.showWordButton.FlatAppearance.BorderSize = 0;
+            this.showWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showWordButton.Location = new System.Drawing.Point(1803, 1013);
+            this.showWordButton.Name = "showWordButton";
+            this.showWordButton.Size = new System.Drawing.Size(75, 23);
+            this.showWordButton.TabIndex = 69;
+            this.showWordButton.UseVisualStyleBackColor = false;
+            this.showWordButton.Click += new System.EventHandler(this.showWordButton_Click);
+            // 
             // Form1
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1881, 1048);
+            this.Controls.Add(this.showWordButton);
+            this.Controls.Add(this.points);
             this.Controls.Add(this.req_score);
             this.Controls.Add(this.user_score);
             this.Controls.Add(this.labelZ);
@@ -1067,6 +1097,8 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label user_score;
         private System.Windows.Forms.Label req_score;
+        private System.Windows.Forms.Label points;
+        private System.Windows.Forms.Button showWordButton;
     }
 }
 

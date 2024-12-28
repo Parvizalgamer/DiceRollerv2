@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace DiceRollerv2
@@ -12,10 +14,11 @@ namespace DiceRollerv2
         private Random random; // Declare Random object at the class level so it's accessible throughout
         private Dictionary<char, int> letterValues; // Dictionary to store actual values for A-Z
         private int userscore = 0;
-        private int totalScore = 0;
+        private int totalpoints = 0;
         private string scoreword;
         private int reqscorewordlength;
         private int reqwordscore;
+        private bool contains=false;
         public Form1()
         {
             InitializeComponent();
@@ -23,8 +26,14 @@ namespace DiceRollerv2
             AssignRandomNumbersToAlphabeticLabels();
             LoadWordsAndValidate();
             GetRandomWord();
+
+            this.showWordButton.Click += new EventHandler(this.ShowRequiredWord);   
         }
 
+        private void ShowRequiredWord(object sender, EventArgs e)
+        {
+            MessageBox.Show($"Required word: {scoreword}", "Required Word", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             //idk
@@ -32,21 +41,17 @@ namespace DiceRollerv2
 
         private void LoadWordsAndValidate()
         {
-
             try
             {
                 // Load words from the resource file
-                string resourceContent = Properties.Resources.filtered_english2;
+                string resourceContent = Properties.Resources.ukenglish;
                 words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
 
                 // Validate the submitted word
                 bool isValid = IsWordValid(submitted_word, words);
-
-
                 if (isValid)
                 {
                     MessageBox.Show("The word is valid!");
-
                 }
                 else
                 {
@@ -57,7 +62,9 @@ namespace DiceRollerv2
             {
                 MessageBox.Show($"Error loading words or validating: {ex.Message}");
             }
-        }// bring the word from english file from resources into a list called  resource content 
+        }
+
+        // bring the word from english file from resources into a list called  resource content 
 
         private void Common_DragEnter(object sender, DragEventArgs e)
         {
@@ -106,7 +113,7 @@ namespace DiceRollerv2
         private void clear_btn_Click(object sender, EventArgs e)
         {
             // Reset the score to 0 when the clear button is clicked
-            totalScore = 0;
+            
             userscore = 0; // Reset the score
 
             // Update the score label to show the empty score or 0
@@ -127,8 +134,7 @@ namespace DiceRollerv2
         private void submit_btn_Click(object sender, EventArgs e)
         {
             // Reset the score before calculating it again
-            totalScore = 0;
-            userscore = 0;  // Reset the score (change from totalScore to score)
+            userscore = 0;  // Reset the score
             submitted_word = string.Empty; // Reset the submitted word
 
             // Loop through the boxes to get the current word
@@ -137,35 +143,56 @@ namespace DiceRollerv2
                 string labelName = "box" + i;
                 Control control = this.Controls.Find(labelName, true)[0];
 
-                if (control is Label label)
+                if (control is Label label && !string.IsNullOrEmpty(label.Text))
                 {
                     submitted_word += label.Text; // Concatenate label text to form the word
                     label.Text = string.Empty; // Clear the label's text
                 }
             }
 
-            // Calculate and show the score based on the word
-            string word = submitted_word.ToUpper(); // Ensure the word is uppercase
-            int wordScore = CalculateTotalScore(word); // Calculate the score for the word
+            // Check if the submitted word is empty
+            if (string.IsNullOrWhiteSpace(submitted_word))
+            {
+                MessageBox.Show("No word submitted!");
+                return;
+            }
+
+            // Convert the submitted word to uppercase for consistency
+            string word = submitted_word.ToUpper();
+
+            // Calculate the score for the word
+            int wordScore = CalculateTotalScore(word);
 
             // Display the concatenated word and the score in the MessageBox
             MessageBox.Show($"Concatenated string: {submitted_word}\nTotal Score: {wordScore}");
 
             // Validate the word
-            LoadWordsAndValidate();
-            CheckScoreAndWordLength();
+            bool isValid = IsWordValid(submitted_word, words);
+
+            if (isValid)
+            {
+                // If valid, check the score and length against the requirements
+                CheckScoreAndWordLength(wordScore);  // Pass wordScore here
+            }
+            else
+            {
+                MessageBox.Show("The word is invalid.");
+            }
         }// submit btn
 
-        public static bool IsWordValid(string submittedWord, List<string> dictionaryWords)
+        public  bool IsWordValid(string submittedWord, List<string> dictionaryWords)
         {
             if (string.IsNullOrWhiteSpace(submittedWord))
             {
+                contains = false;
                 return false;
             }
 
             else
             {
                 return dictionaryWords.Contains(submittedWord, StringComparer.OrdinalIgnoreCase);
+                contains = true;
+
             }
         }// checks if the word submited is valid or not
 
@@ -237,49 +264,82 @@ namespace DiceRollerv2
 
         private void GetRandomWord()
         {
-            // Loop until the word score is between 50 and 150 and the word length is between 4 and 6
             do
             {
-                // Select a random word from the list
                 int randomIndex = random.Next(words.Count);
                 scoreword = words[randomIndex];
 
-                // Check if the word length is between 4 and 6 letters
                 if (scoreword.Length >= 4 && scoreword.Length <= 6)
                 {
-                    // Convert the word to uppercase for scoring
                     string wordToScore = scoreword.ToUpper();
-
-                    // Calculate the score using the existing method
                     reqwordscore = CalculateTotalScore(wordToScore);
                 }
                 else
                 {
-                    // If the word length is not between 4 and 6, skip this word
-                    reqwordscore = 0;  // Prevent calculating score for invalid words
+                    reqwordscore = 0;
                 }
             }
-            while (reqwordscore < 50 || reqwordscore > 150 || scoreword.Length < 4 || scoreword.Length > 6); // Ensure the word's score and length are valid
+            while (reqwordscore < 50 || reqwordscore > 150 || scoreword.Length < 4 || scoreword.Length > 6);
 
             reqscorewordlength = scoreword.Length;
-
-            // Set the required score label with the valid word score and length
             req_score.Text = $"Req score: {reqwordscore} \n Req length: {reqscorewordlength}";
         }
 
-        private void CheckScoreAndWordLength()
+        private void CheckScoreAndWordLength(int wordScore)
         {
-            
-            // Check both conditions
-            if (userscore >= reqwordscore && reqscorewordlength == submitted_word.Length)
+            // Check if the submitted word meets or exceeds both conditions
+            bool isWordValid = IsWordValid(submitted_word, words); // Check if the word is valid
+
+            // Check if both conditions are met: score and word length
+            if (wordScore >= reqwordscore && submitted_word.Length >= reqscorewordlength && isWordValid)
             {
-                MessageBox.Show("Congratulations! You have met the required score and word length.");
+                MessageBox.Show("Congratulations! You have met or exceeded the required score and word length.");
+
+                // Increment the points
+                totalpoints++;
+
+                // Update the points label with the new total points
+                points.Text = totalpoints.ToString();
+
+                // Reset the game elements for the next round
+                ResetForNextRound();
             }
             else
             {
+                MessageBox.Show("You did not meet the required score or word length.");
             }
         }
 
-    }
-}
+        private void ResetForNextRound()
+        {
+            // Call the clear button click method to clear the labels and reset the score
+            clear_btn_Click(null, null); // We don't need to pass actual sender and e, so we can pass null for both
 
+            // Reassign random numbers to the alphabetic labels (for a new round)
+            AssignRandomNumbersToAlphabeticLabels();
+
+            // Reset the required score and word length for the next round
+            GetRandomWord(); // This will generate a new required word with score and length
+
+            // Optionally, you can reset any other game-related UI elements or variables
+            // For example, resetting the submitted word
+            submitted_word = string.Empty;
+        }
+
+
+
+
+
+        private void points_Click(object sender, EventArgs e)
+        {
+            points.Text = totalpoints.ToString();
+        }
+
+        private void showWordButton_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+
+
+}
