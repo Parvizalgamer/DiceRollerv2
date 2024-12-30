@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -9,7 +10,8 @@ namespace DiceRollerv2
 {
     public partial class Form1 : Form
     {
-        private List<string> words; // Store words from the resource file
+        private List<string> dictonarywords; // Store words from the resource file
+        private List<string> gamewords;
         private string submitted_word;
         private Random random; // Declare Random object at the class level so it's accessible throughout
         private Dictionary<char, int> letterValues; // Dictionary to store actual values for A-Z
@@ -46,11 +48,14 @@ namespace DiceRollerv2
             try
             {
                 // Load words from the resource file
-                string resourceContent = Properties.Resources.ukenglish;
-                words = new List<string>(resourceContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+                string DictonaryContent = Properties.Resources.ukenglish;
+                dictonarywords = new List<string>(DictonaryContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+                string chosenwords = Properties.Resources.expanded_filtered_common_words;
+                gamewords= new List<string>(chosenwords.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+
 
                 // Validate the submitted word
-                bool isValid = IsWordValid(submitted_word, words);
+                bool isValid = IsWordValid(submitted_word, dictonarywords);
                 if (isValid)
                 {
                     MessageBox.Show("The word is valid!");
@@ -169,7 +174,7 @@ namespace DiceRollerv2
             MessageBox.Show($"Concatenated string: {submitted_word}\nTotal Score: {wordScore}");
 
             // Validate the word
-            bool isValid = IsWordValid(submitted_word, words);
+            bool isValid = IsWordValid(submitted_word, dictonarywords);
 
             if (isValid)
             {
@@ -194,7 +199,6 @@ namespace DiceRollerv2
             {
                 return dictionaryWords.Contains(submittedWord, StringComparer.OrdinalIgnoreCase);
                 contains = true;
-
             }
         }// checks if the word submited is valid or not
 
@@ -266,31 +270,42 @@ namespace DiceRollerv2
 
         private void GetRandomWord()
         {
-            do
+            try
             {
-                int randomIndex = random.Next(words.Count);
-                scoreword = words[randomIndex];
 
-                if (scoreword.Length >= 4 && scoreword.Length <= 6)
+                do
                 {
-                    string wordToScore = scoreword.ToUpper();
-                    reqwordscore = CalculateTotalScore(wordToScore);
+                    int randomIndex = random.Next(gamewords.Count); // Generate a random index
+                    scoreword = gamewords[randomIndex]; // Retrieve the word at the random index
+
+                    if (scoreword.Length >= 4 && scoreword.Length <= 6)// done this so that the score doesnt get too high or the word doesnt get too big or small
+
+                    {
+                        string wordToScore = scoreword.ToUpper();
+                        reqwordscore = CalculateTotalScore(wordToScore);
+                    }
+                    else
+                    {
+                        reqwordscore = 0;
+                    }
                 }
-                else
-                {
-                    reqwordscore = 0;
-                }
+                while (reqwordscore < 50 || reqwordscore > 150 || scoreword.Length < 4 || scoreword.Length > 6);
+
+                // Update the required score and word length in the UI
+                reqscorewordlength = scoreword.Length;
+                req_score.Text = $"Req score: {reqwordscore} \n Req length: {reqscorewordlength}";
             }
-            while (reqwordscore < 50 || reqwordscore > 150 || scoreword.Length < 4 || scoreword.Length > 6);
-
-            reqscorewordlength = scoreword.Length;
-            req_score.Text = $"Req score: {reqwordscore} \n Req length: {reqscorewordlength}";
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error in GetRandomWord: {ex.Message}");
+            }
         }
+
 
         private void CheckScoreAndWordLength(int wordScore)
         {
             // Check if the submitted word meets or exceeds both conditions
-            bool isWordValid = IsWordValid(submitted_word, words); // Check if the word is valid
+            bool isWordValid = IsWordValid(submitted_word, dictonarywords); // Check if the word is valid
 
             // Check if both conditions are met: score and word length
             if (wordScore >= reqwordscore && submitted_word.Length >= reqscorewordlength && isWordValid)

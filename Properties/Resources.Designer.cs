@@ -142,6 +142,94 @@ namespace DiceRollerv2.Properties {
         ///acorns
         ///acqui [rest of string was truncated]&quot;;.
         /// </summary>
+        internal static string expanded_filtered_common_words {
+            get {
+                return ResourceManager.GetString("expanded_filtered_common_words", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to aachen
+        ///aaron
+        ///aback
+        ///abacus
+        ///abaft
+        ///abase
+        ///abased
+        ///abases
+        ///abash
+        ///abate
+        ///abated
+        ///abates
+        ///abbess
+        ///abbey
+        ///abbeys
+        ///abbot
+        ///abbots
+        ///abduct
+        ///abeam
+        ///abed
+        ///abel
+        ///abet
+        ///abets
+        ///abhor
+        ///abhors
+        ///abide
+        ///abided
+        ///abides
+        ///abject
+        ///abjure
+        ///ablaze
+        ///able
+        ///ablest
+        ///ably
+        ///aboard
+        ///abode
+        ///abodes
+        ///abort
+        ///aborts
+        ///abound
+        ///about
+        ///above
+        ///abrade
+        ///abroad
+        ///abrupt
+        ///abseil
+        ///absent
+        ///absorb
+        ///absurd
+        ///abuse
+        ///abused
+        ///abuser
+        ///abuses
+        ///abut
+        ///abuts
+        ///abyss
+        ///acacia
+        ///accede
+        ///accent
+        ///accept
+        ///access
+        ///accord
+        ///accost
+        ///accra
+        ///accrue
+        ///accuse
+        ///aces
+        ///acetic
+        ///ache
+        ///ached
+        ///aches
+        ///aching
+        ///acid
+        ///acidic
+        ///acids
+        ///acme
+        ///acne
+        ///acorn
+        ///acorns
+        ///acqui [rest of string was truncated]&quot;;.
+        /// </summary>
         internal static string filtered_english2 {
             get {
                 return ResourceManager.GetString("filtered_english2", resourceCulture);
