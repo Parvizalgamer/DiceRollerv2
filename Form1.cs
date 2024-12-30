@@ -92,7 +92,7 @@ namespace DiceRollerv2
             string word = string.Empty;
 
             // Loop through the boxes to get the current word
-            for (int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 string labelName = "box" + i;
                 Control control = this.Controls.Find(labelName, true)[0];
@@ -126,7 +126,7 @@ namespace DiceRollerv2
             // Update the score label to show the empty score or 0
             user_score.Text = userscore.ToString(); // Assuming 'user_score' is a label to show the score
 
-            for (int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 string labelName = "box" + i;
                 Control control = this.Controls.Find(labelName, true)[0];
@@ -145,7 +145,7 @@ namespace DiceRollerv2
             submitted_word = string.Empty; // Reset the submitted word
 
             // Loop through the boxes to get the current word
-            for (int i = 1; i <= 9; i++)
+            for (int i = 1; i <= 6; i++)
             {
                 string labelName = "box" + i;
                 Control control = this.Controls.Find(labelName, true)[0];
@@ -293,7 +293,7 @@ namespace DiceRollerv2
 
                 // Update the required score and word length in the UI
                 reqscorewordlength = scoreword.Length;
-                req_score.Text = $"Req score: {reqwordscore} \n Req length: {reqscorewordlength}";
+                req_score.Text = $"Req score: {reqwordscore} \nReq length: {reqscorewordlength}";
             }
             catch (Exception ex)
             {
@@ -360,7 +360,8 @@ namespace DiceRollerv2
 
         private void showWordButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show($"Required word: {scoreword}", "Required Word", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Required word: {scoreword}", "Required Word", MessageBoxButtons.OK, MessageBoxIcon.Information);// the buttn is not usable without pressing f10 so the user cannot see it
+
         }
     }
 

@@ -35,9 +35,6 @@
             this.box6 = new System.Windows.Forms.Label();
             this.box3 = new System.Windows.Forms.Label();
             this.box5 = new System.Windows.Forms.Label();
-            this.box9 = new System.Windows.Forms.Label();
-            this.box7 = new System.Windows.Forms.Label();
-            this.box8 = new System.Windows.Forms.Label();
             this.B = new System.Windows.Forms.Label();
             this.F = new System.Windows.Forms.Label();
             this.E = new System.Windows.Forms.Label();
@@ -100,9 +97,10 @@
             // 
             // A
             // 
+            this.A.BackColor = System.Drawing.Color.CornflowerBlue;
             this.A.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.A.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.A.Location = new System.Drawing.Point(312, 471);
+            this.A.Location = new System.Drawing.Point(312, 503);
             this.A.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.A.Name = "A";
             this.A.Size = new System.Drawing.Size(120, 123);
@@ -116,12 +114,13 @@
             // box4
             // 
             this.box4.AllowDrop = true;
+            this.box4.BackColor = System.Drawing.Color.CornflowerBlue;
             this.box4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box4.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box4.Location = new System.Drawing.Point(752, 185);
+            this.box4.Location = new System.Drawing.Point(940, 152);
             this.box4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.box4.Name = "box4";
-            this.box4.Size = new System.Drawing.Size(120, 123);
+            this.box4.Size = new System.Drawing.Size(140, 140);
             this.box4.TabIndex = 1;
             this.box4.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
             this.box4.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
@@ -130,12 +129,13 @@
             // box1
             // 
             this.box1.AllowDrop = true;
+            this.box1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.box1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box1.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box1.Location = new System.Drawing.Point(364, 185);
+            this.box1.Location = new System.Drawing.Point(496, 152);
             this.box1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.box1.Name = "box1";
-            this.box1.Size = new System.Drawing.Size(120, 123);
+            this.box1.Size = new System.Drawing.Size(140, 140);
             this.box1.TabIndex = 2;
             this.box1.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
             this.box1.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
@@ -144,12 +144,13 @@
             // box2
             // 
             this.box2.AllowDrop = true;
+            this.box2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.box2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box2.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box2.Location = new System.Drawing.Point(494, 185);
+            this.box2.Location = new System.Drawing.Point(644, 152);
             this.box2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.box2.Name = "box2";
-            this.box2.Size = new System.Drawing.Size(120, 123);
+            this.box2.Size = new System.Drawing.Size(140, 140);
             this.box2.TabIndex = 3;
             this.box2.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
             this.box2.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
@@ -158,12 +159,13 @@
             // box6
             // 
             this.box6.AllowDrop = true;
+            this.box6.BackColor = System.Drawing.Color.CornflowerBlue;
             this.box6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box6.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box6.Location = new System.Drawing.Point(1008, 185);
+            this.box6.Location = new System.Drawing.Point(1236, 152);
             this.box6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.box6.Name = "box6";
-            this.box6.Size = new System.Drawing.Size(120, 123);
+            this.box6.Size = new System.Drawing.Size(140, 140);
             this.box6.TabIndex = 6;
             this.box6.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
             this.box6.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
@@ -172,12 +174,13 @@
             // box3
             // 
             this.box3.AllowDrop = true;
+            this.box3.BackColor = System.Drawing.Color.CornflowerBlue;
             this.box3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box3.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box3.Location = new System.Drawing.Point(622, 185);
+            this.box3.Location = new System.Drawing.Point(792, 152);
             this.box3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.box3.Name = "box3";
-            this.box3.Size = new System.Drawing.Size(120, 123);
+            this.box3.Size = new System.Drawing.Size(140, 140);
             this.box3.TabIndex = 5;
             this.box3.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
             this.box3.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
@@ -186,64 +189,24 @@
             // box5
             // 
             this.box5.AllowDrop = true;
+            this.box5.BackColor = System.Drawing.Color.CornflowerBlue;
             this.box5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.box5.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box5.Location = new System.Drawing.Point(878, 185);
+            this.box5.Location = new System.Drawing.Point(1088, 152);
             this.box5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.box5.Name = "box5";
-            this.box5.Size = new System.Drawing.Size(120, 123);
+            this.box5.Size = new System.Drawing.Size(140, 140);
             this.box5.TabIndex = 4;
             this.box5.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
             this.box5.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
             this.box5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
             // 
-            // box9
-            // 
-            this.box9.AllowDrop = true;
-            this.box9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.box9.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box9.Location = new System.Drawing.Point(1395, 185);
-            this.box9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.box9.Name = "box9";
-            this.box9.Size = new System.Drawing.Size(120, 123);
-            this.box9.TabIndex = 9;
-            this.box9.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.box9.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.box9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
-            // 
-            // box7
-            // 
-            this.box7.AllowDrop = true;
-            this.box7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.box7.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box7.Location = new System.Drawing.Point(1137, 185);
-            this.box7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.box7.Name = "box7";
-            this.box7.Size = new System.Drawing.Size(120, 123);
-            this.box7.TabIndex = 8;
-            this.box7.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.box7.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.box7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
-            // 
-            // box8
-            // 
-            this.box8.AllowDrop = true;
-            this.box8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.box8.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.box8.Location = new System.Drawing.Point(1266, 185);
-            this.box8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.box8.Name = "box8";
-            this.box8.Size = new System.Drawing.Size(120, 123);
-            this.box8.TabIndex = 7;
-            this.box8.DragDrop += new System.Windows.Forms.DragEventHandler(this.Common_DragDrop);
-            this.box8.DragEnter += new System.Windows.Forms.DragEventHandler(this.Common_DragEnter);
-            this.box8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Common_MouseDown);
-            // 
             // B
             // 
+            this.B.BackColor = System.Drawing.Color.CornflowerBlue;
             this.B.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.B.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B.Location = new System.Drawing.Point(441, 471);
+            this.B.Location = new System.Drawing.Point(441, 503);
             this.B.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.B.Name = "B";
             this.B.Size = new System.Drawing.Size(120, 123);
@@ -256,9 +219,10 @@
             // 
             // F
             // 
+            this.F.BackColor = System.Drawing.Color.CornflowerBlue;
             this.F.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.F.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.F.Location = new System.Drawing.Point(962, 471);
+            this.F.Location = new System.Drawing.Point(962, 503);
             this.F.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.F.Name = "F";
             this.F.Size = new System.Drawing.Size(120, 123);
@@ -271,9 +235,10 @@
             // 
             // E
             // 
+            this.E.BackColor = System.Drawing.Color.CornflowerBlue;
             this.E.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.E.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.E.Location = new System.Drawing.Point(832, 471);
+            this.E.Location = new System.Drawing.Point(832, 503);
             this.E.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.E.Name = "E";
             this.E.Size = new System.Drawing.Size(120, 123);
@@ -286,9 +251,10 @@
             // 
             // D
             // 
+            this.D.BackColor = System.Drawing.Color.CornflowerBlue;
             this.D.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.D.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.D.Location = new System.Drawing.Point(704, 471);
+            this.D.Location = new System.Drawing.Point(704, 503);
             this.D.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.D.Name = "D";
             this.D.Size = new System.Drawing.Size(120, 123);
@@ -301,9 +267,10 @@
             // 
             // C
             // 
+            this.C.BackColor = System.Drawing.Color.CornflowerBlue;
             this.C.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.C.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.C.Location = new System.Drawing.Point(574, 471);
+            this.C.Location = new System.Drawing.Point(574, 503);
             this.C.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.C.Name = "C";
             this.C.Size = new System.Drawing.Size(120, 123);
@@ -316,9 +283,10 @@
             // 
             // I
             // 
+            this.I.BackColor = System.Drawing.Color.CornflowerBlue;
             this.I.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.I.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.I.Location = new System.Drawing.Point(1348, 471);
+            this.I.Location = new System.Drawing.Point(1348, 503);
             this.I.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.I.Name = "I";
             this.I.Size = new System.Drawing.Size(120, 123);
@@ -331,9 +299,10 @@
             // 
             // J
             // 
+            this.J.BackColor = System.Drawing.Color.CornflowerBlue;
             this.J.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.J.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.J.Location = new System.Drawing.Point(1478, 471);
+            this.J.Location = new System.Drawing.Point(1478, 503);
             this.J.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.J.Name = "J";
             this.J.Size = new System.Drawing.Size(120, 123);
@@ -345,9 +314,10 @@
             // 
             // H
             // 
+            this.H.BackColor = System.Drawing.Color.CornflowerBlue;
             this.H.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.H.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.H.Location = new System.Drawing.Point(1220, 471);
+            this.H.Location = new System.Drawing.Point(1220, 503);
             this.H.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.H.Name = "H";
             this.H.Size = new System.Drawing.Size(120, 123);
@@ -360,9 +330,10 @@
             // 
             // G
             // 
+            this.G.BackColor = System.Drawing.Color.CornflowerBlue;
             this.G.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.G.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.G.Location = new System.Drawing.Point(1090, 471);
+            this.G.Location = new System.Drawing.Point(1090, 503);
             this.G.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.G.Name = "G";
             this.G.Size = new System.Drawing.Size(120, 123);
@@ -375,9 +346,10 @@
             // 
             // S
             // 
+            this.S.BackColor = System.Drawing.Color.CornflowerBlue;
             this.S.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.S.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.S.Location = new System.Drawing.Point(1413, 615);
+            this.S.Location = new System.Drawing.Point(1413, 647);
             this.S.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.S.Name = "S";
             this.S.Size = new System.Drawing.Size(120, 123);
@@ -390,9 +362,10 @@
             // 
             // R
             // 
+            this.R.BackColor = System.Drawing.Color.CornflowerBlue;
             this.R.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.R.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.R.Location = new System.Drawing.Point(1284, 615);
+            this.R.Location = new System.Drawing.Point(1284, 647);
             this.R.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.R.Name = "R";
             this.R.Size = new System.Drawing.Size(120, 123);
@@ -405,9 +378,10 @@
             // 
             // Q
             // 
+            this.Q.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Q.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Q.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Q.Location = new System.Drawing.Point(1155, 615);
+            this.Q.Location = new System.Drawing.Point(1155, 647);
             this.Q.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Q.Name = "Q";
             this.Q.Size = new System.Drawing.Size(120, 123);
@@ -420,9 +394,10 @@
             // 
             // M
             // 
+            this.M.BackColor = System.Drawing.Color.CornflowerBlue;
             this.M.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.M.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.M.Location = new System.Drawing.Point(639, 615);
+            this.M.Location = new System.Drawing.Point(639, 647);
             this.M.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.M.Name = "M";
             this.M.Size = new System.Drawing.Size(120, 123);
@@ -435,9 +410,10 @@
             // 
             // N
             // 
+            this.N.BackColor = System.Drawing.Color.CornflowerBlue;
             this.N.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.N.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.N.Location = new System.Drawing.Point(768, 615);
+            this.N.Location = new System.Drawing.Point(768, 647);
             this.N.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.N.Name = "N";
             this.N.Size = new System.Drawing.Size(120, 123);
@@ -450,9 +426,10 @@
             // 
             // O
             // 
+            this.O.BackColor = System.Drawing.Color.CornflowerBlue;
             this.O.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.O.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.O.Location = new System.Drawing.Point(897, 615);
+            this.O.Location = new System.Drawing.Point(897, 647);
             this.O.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.O.Name = "O";
             this.O.Size = new System.Drawing.Size(120, 123);
@@ -465,9 +442,10 @@
             // 
             // P
             // 
+            this.P.BackColor = System.Drawing.Color.CornflowerBlue;
             this.P.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.P.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.P.Location = new System.Drawing.Point(1026, 615);
+            this.P.Location = new System.Drawing.Point(1026, 647);
             this.P.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.P.Name = "P";
             this.P.Size = new System.Drawing.Size(120, 123);
@@ -480,9 +458,10 @@
             // 
             // L
             // 
+            this.L.BackColor = System.Drawing.Color.CornflowerBlue;
             this.L.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.L.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L.Location = new System.Drawing.Point(506, 615);
+            this.L.Location = new System.Drawing.Point(506, 647);
             this.L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.L.Name = "L";
             this.L.Size = new System.Drawing.Size(120, 123);
@@ -495,9 +474,10 @@
             // 
             // K
             // 
+            this.K.BackColor = System.Drawing.Color.CornflowerBlue;
             this.K.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.K.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.K.Location = new System.Drawing.Point(376, 615);
+            this.K.Location = new System.Drawing.Point(376, 647);
             this.K.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.K.Name = "K";
             this.K.Size = new System.Drawing.Size(120, 123);
@@ -510,9 +490,10 @@
             // 
             // Z
             // 
+            this.Z.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Z.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Z.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Z.Location = new System.Drawing.Point(1298, 754);
+            this.Z.Location = new System.Drawing.Point(1298, 786);
             this.Z.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Z.Name = "Z";
             this.Z.Size = new System.Drawing.Size(120, 123);
@@ -525,9 +506,10 @@
             // 
             // V
             // 
+            this.V.BackColor = System.Drawing.Color.CornflowerBlue;
             this.V.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.V.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.V.Location = new System.Drawing.Point(782, 754);
+            this.V.Location = new System.Drawing.Point(782, 786);
             this.V.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.V.Name = "V";
             this.V.Size = new System.Drawing.Size(120, 123);
@@ -540,9 +522,10 @@
             // 
             // W
             // 
+            this.W.BackColor = System.Drawing.Color.CornflowerBlue;
             this.W.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.W.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.W.Location = new System.Drawing.Point(910, 754);
+            this.W.Location = new System.Drawing.Point(910, 786);
             this.W.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.W.Name = "W";
             this.W.Size = new System.Drawing.Size(120, 123);
@@ -555,9 +538,10 @@
             // 
             // X
             // 
+            this.X.BackColor = System.Drawing.Color.CornflowerBlue;
             this.X.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.X.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X.Location = new System.Drawing.Point(1040, 754);
+            this.X.Location = new System.Drawing.Point(1040, 786);
             this.X.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.X.Name = "X";
             this.X.Size = new System.Drawing.Size(120, 123);
@@ -570,9 +554,10 @@
             // 
             // Y
             // 
+            this.Y.BackColor = System.Drawing.Color.CornflowerBlue;
             this.Y.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Y.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Y.Location = new System.Drawing.Point(1168, 754);
+            this.Y.Location = new System.Drawing.Point(1168, 786);
             this.Y.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Y.Name = "Y";
             this.Y.Size = new System.Drawing.Size(120, 123);
@@ -585,9 +570,10 @@
             // 
             // U
             // 
+            this.U.BackColor = System.Drawing.Color.CornflowerBlue;
             this.U.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.U.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.U.Location = new System.Drawing.Point(648, 754);
+            this.U.Location = new System.Drawing.Point(648, 786);
             this.U.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.U.Name = "U";
             this.U.Size = new System.Drawing.Size(120, 123);
@@ -600,9 +586,10 @@
             // 
             // T
             // 
+            this.T.BackColor = System.Drawing.Color.CornflowerBlue;
             this.T.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.T.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.T.Location = new System.Drawing.Point(519, 754);
+            this.T.Location = new System.Drawing.Point(519, 786);
             this.T.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.T.Name = "T";
             this.T.Size = new System.Drawing.Size(120, 123);
@@ -616,9 +603,10 @@
             // clear_btn
             // 
             this.clear_btn.AllowDrop = true;
+            this.clear_btn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.clear_btn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.clear_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear_btn.Location = new System.Drawing.Point(480, 325);
+            this.clear_btn.Location = new System.Drawing.Point(480, 357);
             this.clear_btn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.clear_btn.Name = "clear_btn";
             this.clear_btn.Size = new System.Drawing.Size(392, 123);
@@ -629,9 +617,10 @@
             // submit_btn
             // 
             this.submit_btn.AllowDrop = true;
+            this.submit_btn.BackColor = System.Drawing.Color.CornflowerBlue;
             this.submit_btn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.submit_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.submit_btn.Location = new System.Drawing.Point(948, 325);
+            this.submit_btn.Location = new System.Drawing.Point(948, 357);
             this.submit_btn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.submit_btn.Name = "submit_btn";
             this.submit_btn.Size = new System.Drawing.Size(438, 123);
@@ -642,8 +631,8 @@
             // labelA
             // 
             this.labelA.AutoSize = true;
-            this.labelA.BackColor = System.Drawing.Color.Transparent;
-            this.labelA.Location = new System.Drawing.Point(393, 486);
+            this.labelA.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelA.Location = new System.Drawing.Point(393, 518);
             this.labelA.Name = "labelA";
             this.labelA.Size = new System.Drawing.Size(27, 20);
             this.labelA.TabIndex = 39;
@@ -652,8 +641,8 @@
             // labelB
             // 
             this.labelB.AutoSize = true;
-            this.labelB.BackColor = System.Drawing.Color.Transparent;
-            this.labelB.Location = new System.Drawing.Point(540, 486);
+            this.labelB.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelB.Location = new System.Drawing.Point(540, 518);
             this.labelB.Name = "labelB";
             this.labelB.Size = new System.Drawing.Size(27, 20);
             this.labelB.TabIndex = 40;
@@ -662,8 +651,8 @@
             // labelC
             // 
             this.labelC.AutoSize = true;
-            this.labelC.BackColor = System.Drawing.Color.Transparent;
-            this.labelC.Location = new System.Drawing.Point(667, 486);
+            this.labelC.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelC.Location = new System.Drawing.Point(667, 518);
             this.labelC.Name = "labelC";
             this.labelC.Size = new System.Drawing.Size(27, 20);
             this.labelC.TabIndex = 41;
@@ -672,8 +661,8 @@
             // labelD
             // 
             this.labelD.AutoSize = true;
-            this.labelD.BackColor = System.Drawing.Color.Transparent;
-            this.labelD.Location = new System.Drawing.Point(798, 486);
+            this.labelD.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelD.Location = new System.Drawing.Point(798, 518);
             this.labelD.Name = "labelD";
             this.labelD.Size = new System.Drawing.Size(27, 20);
             this.labelD.TabIndex = 42;
@@ -682,8 +671,8 @@
             // labelE
             // 
             this.labelE.AutoSize = true;
-            this.labelE.BackColor = System.Drawing.Color.Transparent;
-            this.labelE.Location = new System.Drawing.Point(925, 486);
+            this.labelE.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelE.Location = new System.Drawing.Point(925, 518);
             this.labelE.Name = "labelE";
             this.labelE.Size = new System.Drawing.Size(27, 20);
             this.labelE.TabIndex = 43;
@@ -692,8 +681,8 @@
             // labelF
             // 
             this.labelF.AutoSize = true;
-            this.labelF.BackColor = System.Drawing.Color.Transparent;
-            this.labelF.Location = new System.Drawing.Point(1055, 486);
+            this.labelF.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelF.Location = new System.Drawing.Point(1055, 518);
             this.labelF.Name = "labelF";
             this.labelF.Size = new System.Drawing.Size(27, 20);
             this.labelF.TabIndex = 44;
@@ -702,8 +691,8 @@
             // labelG
             // 
             this.labelG.AutoSize = true;
-            this.labelG.BackColor = System.Drawing.Color.Transparent;
-            this.labelG.Location = new System.Drawing.Point(1183, 486);
+            this.labelG.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelG.Location = new System.Drawing.Point(1183, 518);
             this.labelG.Name = "labelG";
             this.labelG.Size = new System.Drawing.Size(27, 20);
             this.labelG.TabIndex = 45;
@@ -712,8 +701,8 @@
             // labelH
             // 
             this.labelH.AutoSize = true;
-            this.labelH.BackColor = System.Drawing.Color.Transparent;
-            this.labelH.Location = new System.Drawing.Point(1313, 486);
+            this.labelH.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelH.Location = new System.Drawing.Point(1313, 518);
             this.labelH.Name = "labelH";
             this.labelH.Size = new System.Drawing.Size(27, 20);
             this.labelH.TabIndex = 46;
@@ -722,8 +711,8 @@
             // labelI
             // 
             this.labelI.AutoSize = true;
-            this.labelI.BackColor = System.Drawing.Color.Transparent;
-            this.labelI.Location = new System.Drawing.Point(1441, 486);
+            this.labelI.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelI.Location = new System.Drawing.Point(1441, 518);
             this.labelI.Name = "labelI";
             this.labelI.Size = new System.Drawing.Size(27, 20);
             this.labelI.TabIndex = 47;
@@ -732,8 +721,8 @@
             // labelJ
             // 
             this.labelJ.AutoSize = true;
-            this.labelJ.BackColor = System.Drawing.Color.Transparent;
-            this.labelJ.Location = new System.Drawing.Point(1560, 486);
+            this.labelJ.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelJ.Location = new System.Drawing.Point(1560, 518);
             this.labelJ.Name = "labelJ";
             this.labelJ.Size = new System.Drawing.Size(27, 20);
             this.labelJ.TabIndex = 48;
@@ -742,8 +731,8 @@
             // labelK
             // 
             this.labelK.AutoSize = true;
-            this.labelK.BackColor = System.Drawing.Color.Transparent;
-            this.labelK.Location = new System.Drawing.Point(457, 628);
+            this.labelK.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelK.Location = new System.Drawing.Point(457, 660);
             this.labelK.Name = "labelK";
             this.labelK.Size = new System.Drawing.Size(27, 20);
             this.labelK.TabIndex = 49;
@@ -752,8 +741,8 @@
             // labelL
             // 
             this.labelL.AutoSize = true;
-            this.labelL.BackColor = System.Drawing.Color.Transparent;
-            this.labelL.Location = new System.Drawing.Point(587, 628);
+            this.labelL.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelL.Location = new System.Drawing.Point(587, 660);
             this.labelL.Name = "labelL";
             this.labelL.Size = new System.Drawing.Size(27, 20);
             this.labelL.TabIndex = 50;
@@ -762,8 +751,8 @@
             // labelM
             // 
             this.labelM.AutoSize = true;
-            this.labelM.BackColor = System.Drawing.Color.Transparent;
-            this.labelM.Location = new System.Drawing.Point(732, 628);
+            this.labelM.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelM.Location = new System.Drawing.Point(732, 660);
             this.labelM.Name = "labelM";
             this.labelM.Size = new System.Drawing.Size(27, 20);
             this.labelM.TabIndex = 51;
@@ -772,8 +761,8 @@
             // labelN
             // 
             this.labelN.AutoSize = true;
-            this.labelN.BackColor = System.Drawing.Color.Transparent;
-            this.labelN.Location = new System.Drawing.Point(845, 628);
+            this.labelN.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelN.Location = new System.Drawing.Point(845, 660);
             this.labelN.Name = "labelN";
             this.labelN.Size = new System.Drawing.Size(27, 20);
             this.labelN.TabIndex = 52;
@@ -782,8 +771,8 @@
             // labelO
             // 
             this.labelO.AutoSize = true;
-            this.labelO.BackColor = System.Drawing.Color.Transparent;
-            this.labelO.Location = new System.Drawing.Point(971, 628);
+            this.labelO.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelO.Location = new System.Drawing.Point(971, 660);
             this.labelO.Name = "labelO";
             this.labelO.Size = new System.Drawing.Size(27, 20);
             this.labelO.TabIndex = 53;
@@ -792,8 +781,8 @@
             // labelP
             // 
             this.labelP.AutoSize = true;
-            this.labelP.BackColor = System.Drawing.Color.Transparent;
-            this.labelP.Location = new System.Drawing.Point(1119, 628);
+            this.labelP.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelP.Location = new System.Drawing.Point(1119, 660);
             this.labelP.Name = "labelP";
             this.labelP.Size = new System.Drawing.Size(27, 20);
             this.labelP.TabIndex = 54;
@@ -802,8 +791,8 @@
             // labelQ
             // 
             this.labelQ.AutoSize = true;
-            this.labelQ.BackColor = System.Drawing.Color.Transparent;
-            this.labelQ.Location = new System.Drawing.Point(1248, 628);
+            this.labelQ.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelQ.Location = new System.Drawing.Point(1248, 660);
             this.labelQ.Name = "labelQ";
             this.labelQ.Size = new System.Drawing.Size(27, 20);
             this.labelQ.TabIndex = 55;
@@ -812,8 +801,8 @@
             // labelR
             // 
             this.labelR.AutoSize = true;
-            this.labelR.BackColor = System.Drawing.Color.Transparent;
-            this.labelR.Location = new System.Drawing.Point(1379, 628);
+            this.labelR.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelR.Location = new System.Drawing.Point(1379, 660);
             this.labelR.Name = "labelR";
             this.labelR.Size = new System.Drawing.Size(27, 20);
             this.labelR.TabIndex = 56;
@@ -822,8 +811,8 @@
             // labelS
             // 
             this.labelS.AutoSize = true;
-            this.labelS.BackColor = System.Drawing.Color.Transparent;
-            this.labelS.Location = new System.Drawing.Point(1488, 628);
+            this.labelS.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelS.Location = new System.Drawing.Point(1488, 660);
             this.labelS.Name = "labelS";
             this.labelS.Size = new System.Drawing.Size(27, 20);
             this.labelS.TabIndex = 57;
@@ -832,8 +821,8 @@
             // labelT
             // 
             this.labelT.AutoSize = true;
-            this.labelT.BackColor = System.Drawing.Color.Transparent;
-            this.labelT.Location = new System.Drawing.Point(599, 763);
+            this.labelT.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelT.Location = new System.Drawing.Point(599, 795);
             this.labelT.Name = "labelT";
             this.labelT.Size = new System.Drawing.Size(27, 20);
             this.labelT.TabIndex = 58;
@@ -842,8 +831,8 @@
             // labelU
             // 
             this.labelU.AutoSize = true;
-            this.labelU.BackColor = System.Drawing.Color.Transparent;
-            this.labelU.Location = new System.Drawing.Point(732, 763);
+            this.labelU.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelU.Location = new System.Drawing.Point(732, 795);
             this.labelU.Name = "labelU";
             this.labelU.Size = new System.Drawing.Size(27, 20);
             this.labelU.TabIndex = 59;
@@ -852,8 +841,8 @@
             // labelV
             // 
             this.labelV.AutoSize = true;
-            this.labelV.BackColor = System.Drawing.Color.Transparent;
-            this.labelV.Location = new System.Drawing.Point(861, 763);
+            this.labelV.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelV.Location = new System.Drawing.Point(861, 795);
             this.labelV.Name = "labelV";
             this.labelV.Size = new System.Drawing.Size(27, 20);
             this.labelV.TabIndex = 60;
@@ -862,8 +851,8 @@
             // labelW
             // 
             this.labelW.AutoSize = true;
-            this.labelW.BackColor = System.Drawing.Color.Transparent;
-            this.labelW.Location = new System.Drawing.Point(990, 763);
+            this.labelW.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelW.Location = new System.Drawing.Point(990, 795);
             this.labelW.Name = "labelW";
             this.labelW.Size = new System.Drawing.Size(27, 20);
             this.labelW.TabIndex = 61;
@@ -872,8 +861,8 @@
             // labelX
             // 
             this.labelX.AutoSize = true;
-            this.labelX.BackColor = System.Drawing.Color.Transparent;
-            this.labelX.Location = new System.Drawing.Point(1119, 763);
+            this.labelX.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelX.Location = new System.Drawing.Point(1119, 795);
             this.labelX.Name = "labelX";
             this.labelX.Size = new System.Drawing.Size(27, 20);
             this.labelX.TabIndex = 62;
@@ -882,8 +871,8 @@
             // labelY
             // 
             this.labelY.AutoSize = true;
-            this.labelY.BackColor = System.Drawing.Color.Transparent;
-            this.labelY.Location = new System.Drawing.Point(1248, 763);
+            this.labelY.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelY.Location = new System.Drawing.Point(1248, 795);
             this.labelY.Name = "labelY";
             this.labelY.Size = new System.Drawing.Size(27, 20);
             this.labelY.TabIndex = 63;
@@ -892,8 +881,8 @@
             // labelZ
             // 
             this.labelZ.AutoSize = true;
-            this.labelZ.BackColor = System.Drawing.Color.Transparent;
-            this.labelZ.Location = new System.Drawing.Point(1377, 763);
+            this.labelZ.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.labelZ.Location = new System.Drawing.Point(1377, 795);
             this.labelZ.Name = "labelZ";
             this.labelZ.Size = new System.Drawing.Size(27, 20);
             this.labelZ.TabIndex = 64;
@@ -902,9 +891,10 @@
             // user_score
             // 
             this.user_score.AllowDrop = true;
+            this.user_score.BackColor = System.Drawing.Color.CornflowerBlue;
             this.user_score.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.user_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.user_score.Location = new System.Drawing.Point(1581, 185);
+            this.user_score.Location = new System.Drawing.Point(1508, 152);
             this.user_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.user_score.Name = "user_score";
             this.user_score.Size = new System.Drawing.Size(287, 123);
@@ -913,20 +903,22 @@
             // req_score
             // 
             this.req_score.AllowDrop = true;
+            this.req_score.BackColor = System.Drawing.Color.CornflowerBlue;
             this.req_score.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.req_score.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.req_score.Location = new System.Drawing.Point(13, 80);
+            this.req_score.Location = new System.Drawing.Point(76, 163);
             this.req_score.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.req_score.Name = "req_score";
-            this.req_score.Size = new System.Drawing.Size(343, 201);
+            this.req_score.Size = new System.Drawing.Size(356, 112);
             this.req_score.TabIndex = 67;
             // 
             // points
             // 
             this.points.AllowDrop = true;
+            this.points.BackColor = System.Drawing.Color.CornflowerBlue;
             this.points.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.points.Font = new System.Drawing.Font("Microsoft Sans Serif", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.points.Location = new System.Drawing.Point(1661, 29);
+            this.points.Location = new System.Drawing.Point(1621, 9);
             this.points.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.points.Name = "points";
             this.points.Size = new System.Drawing.Size(138, 123);
@@ -940,11 +932,12 @@
             this.showWordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.showWordButton.FlatAppearance.BorderSize = 0;
             this.showWordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.showWordButton.Location = new System.Drawing.Point(1735, 937);
+            this.showWordButton.Location = new System.Drawing.Point(1735, 954);
             this.showWordButton.Name = "showWordButton";
             this.showWordButton.Size = new System.Drawing.Size(124, 99);
             this.showWordButton.TabIndex = 69;
             this.showWordButton.UseVisualStyleBackColor = false;
+            this.showWordButton.Visible = false;
             this.showWordButton.Click += new System.EventHandler(this.showWordButton_Click);
             this.showWordButton.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
@@ -953,7 +946,9 @@
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1881, 1048);
+            this.BackgroundImage = global::DiceRollerv2.Properties.Resources._1876;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1898, 1024);
             this.Controls.Add(this.showWordButton);
             this.Controls.Add(this.points);
             this.Controls.Add(this.req_score);
@@ -1011,9 +1006,6 @@
             this.Controls.Add(this.E);
             this.Controls.Add(this.F);
             this.Controls.Add(this.B);
-            this.Controls.Add(this.box9);
-            this.Controls.Add(this.box7);
-            this.Controls.Add(this.box8);
             this.Controls.Add(this.box6);
             this.Controls.Add(this.box3);
             this.Controls.Add(this.box5);
@@ -1039,9 +1031,6 @@
         private System.Windows.Forms.Label box6;
         private System.Windows.Forms.Label box3;
         private System.Windows.Forms.Label box5;
-        private System.Windows.Forms.Label box9;
-        private System.Windows.Forms.Label box7;
-        private System.Windows.Forms.Label box8;
         private System.Windows.Forms.Label B;
         private System.Windows.Forms.Label F;
         private System.Windows.Forms.Label E;

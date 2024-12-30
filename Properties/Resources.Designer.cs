@@ -61,6 +61,16 @@ namespace DiceRollerv2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1876 {
+            get {
+                object obj = ResourceManager.GetObject("_1876", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to aachen
         ///aaron
         ///aback
