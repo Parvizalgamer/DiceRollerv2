@@ -11,8 +11,8 @@ namespace DiceRollerv2
     public partial class Form1 : Form
     {
         private List<string> dictonarywords; // Store words from the resource file
-        private List<string> gamewords;
-        private string submitted_word;
+        private List<string> gamewords;// for selection for word chooseing by game
+        private string submitted_word;// user submitted word
         private Random random; // Declare Random object at the class level so it's accessible throughout
         private Dictionary<char, int> letterValues; // Dictionary to store actual values for A-Z
         private int userscore = 0;
@@ -33,14 +33,14 @@ namespace DiceRollerv2
             // Set KeyPreview to true so that the form can capture key events
             this.KeyPreview = true;
 
-            // Wire up the KeyDown event
+            
             this.KeyDown += new KeyEventHandler(Form1_KeyDown);
         }
 
       
         private void Form1_Load(object sender, EventArgs e)
         {
-            //idk
+        
         }
 
         private void LoadWordsAndValidate()
@@ -50,6 +50,7 @@ namespace DiceRollerv2
                 // Load words from the resource file
                 string DictonaryContent = Properties.Resources.ukenglish;
                 dictonarywords = new List<string>(DictonaryContent.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
+                
                 string chosenwords = Properties.Resources.expanded_filtered_common_words;
                 gamewords= new List<string>(chosenwords.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None));
 
