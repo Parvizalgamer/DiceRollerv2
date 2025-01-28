@@ -34,7 +34,7 @@ namespace DiceRollerv2
             int attempts = 0;
             int maxAttempts = 10; // Prevent infinite loops
             int requiredScore = 0; // This will hold the score of the computer-generated word
-            string targetWord = ""; // Store the target word for debugging or hint purposes
+            string targetWord = ""; // Store the target word for debugging or hint purposes/ F10
 
             while (!validSetup && attempts < maxAttempts)
             {
